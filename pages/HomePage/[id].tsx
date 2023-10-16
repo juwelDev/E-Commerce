@@ -4,10 +4,8 @@ const HomePage = () => {
     return (
         <div>
             <div>
-                <h1 className="text-2xl">HomePage page</h1>
+                <h1 className="text-2xl">welcome to my website and It's name Muktari's Collection</h1>
             </div>
-            <div></div>
-            <div></div>
         </div>
     )
 }
