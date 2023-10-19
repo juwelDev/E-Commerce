@@ -1,11 +1,11 @@
 import React from "react";
 import { baseUrl } from '@/config/appConfig';
 
-const ProductCart = () => {
+const ProductCard = () => {
     return (
-        <>
+        <div className="w-[272px] h-[410px]">
             {/* product image */}
-            <div className="relative overflow-hidden cursor-pointer">
+            <div className="w-full relative overflow-hidden cursor-pointer">
                 <img src={`${baseUrl}/img/product/product-14.jpg`} alt="" className="w-full" />
                 <div className="absolute inset-0 flex items-center justify-center space-x-1 bg-black/20 opacity-0 group-hover:opacity-100 transition">
                     <a
@@ -23,8 +23,9 @@ const ProductCart = () => {
                 </div>
             </div>
             {/* product image */}
+
             {/* Product description */}
-            <div>
+            <div className="w-full ">
                 <h3 className="pl-3 pt-3 text-primary font-bold text-lg">Wooden Chair</h3>
 
                 {/* Product Price */}
@@ -60,9 +61,9 @@ const ProductCart = () => {
                 </div>
             </div>
             {/* Product description */}
-        </>
+        </div>
 
     );
 }
 
-export default ProductCart;
+export default ProductCard;
