@@ -7,9 +7,8 @@ const HomePage = () => {
   return (
     <Layout>
       <Head>
-        <title>title</title>
+        <title>No.1 E-Commerce</title>
       </Head>
-      HomePage
     </Layout>
   );
 }
