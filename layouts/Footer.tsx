@@ -6,7 +6,7 @@ import { GrMail } from "react-icons/gr";
 
 const Footer = () => {
   return (
-    <footer className="w-full">\
+    <footer className="w-full">
       <div className="py-10 mt-24 border-t border-separate">
         <div className="container">
           <div className="row grid grid-cols-3 gap-x-10">
