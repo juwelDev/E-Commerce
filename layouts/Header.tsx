@@ -4,6 +4,8 @@ import { baseUrl } from '@/config/appConfig';
 import { FaBars, FaBed, FaUtensils } from "react-icons/fa";
 import { FaMattressPillow } from "react-icons/fa6";
 
+
+
 const Header = () => {
   return (
     <>
@@ -46,7 +48,8 @@ const Header = () => {
                 <span className="bg-accentOne h-5 w-5 flex items-center justify-center rounded-full absolute -top-2 left-8">
                   8
                 </span>
-                <p>Wish List</p>
+                
+                <a href="WishList">WishList</a>
               </div>
               <div className="relative flex flex-col items-center cursor-pointer">
                 <img src={`${baseUrl}/img/icon/shopping-cart.svg`} alt="" />
