@@ -1,5 +1,4 @@
-import React from "react";
-import { baseUrl } from '@/config/appConfig';
+import { baseUrl } from "@/config/appConfig";
 
 import { FaBars, FaBed, FaUtensils } from "react-icons/fa";
 import { FaMattressPillow } from "react-icons/fa6";
@@ -14,7 +13,11 @@ const Header = () => {
             {/* Col 1 */}
             <div>
               <a href="index.html">
-                <img src={`${baseUrl}/img/logo/logo.png`} alt="website-logo" className="w-24" />
+                <img
+                  src={`${baseUrl}/img/logo/logo.png`}
+                  alt="website-logo"
+                  className="w-24"
+                />
               </a>
             </div>
             {/* Col 2 */}
@@ -75,7 +78,7 @@ const Header = () => {
                 <a href="#" className="flex items-center space-x-2 px-5 py-3">
                   <span>
                     <i className="fa-solid fa-bars text-white" />
-                    <FaBars className="text-white"/>
+                    <FaBars className="text-white" />
                   </span>
                   <span>All Categories</span>
                 </a>
@@ -84,19 +87,19 @@ const Header = () => {
               <div className="text-primary absolute bg-white w-full shadow-md divide-y divide-dashed divide-separatorColor opacity-0 invisible group-hover:opacity-100 group-hover:visible transition duration-500">
                 <a href="#" className="flex items-center space-x-2 px-5 py-3">
                   <span>
-                    <FaBed className="text-accentOne"/>
+                    <FaBed className="text-accentOne" />
                   </span>
                   <span>Bedroom</span>
                 </a>
                 <a href="#" className="flex items-center space-x-2 px-5 py-3">
                   <span>
-                    <FaMattressPillow className="text-accentOne"/>
+                    <FaMattressPillow className="text-accentOne" />
                   </span>
                   <span>Mattress</span>
                 </a>
                 <a href="#" className="flex items-center space-x-2 px-5 py-3">
                   <span>
-                    <FaUtensils className="text-accentOne"/>
+                    <FaUtensils className="text-accentOne" />
                   </span>
                   <span>Dinning</span>
                 </a>
@@ -106,7 +109,7 @@ const Header = () => {
             <div className="flex justify-between flex-grow">
               <div className="space-x-5">
                 <a href="index.html">Home</a>
-                <a href="shop.html">Shop</a>
+                <a href="shop">Shop</a>
                 <a href="#">About Us</a>
                 <a href="#">Contact Us</a>
               </div>
@@ -120,6 +123,6 @@ const Header = () => {
       {/* End Navbar */}
     </>
   );
-}
+};
 
 export default Header;
