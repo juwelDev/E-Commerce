@@ -3,6 +3,10 @@ import React, { ReactNode, useEffect } from "react";
 import { baseUrl } from '@/config/appConfig';
 import Header from "@/layouts/Header";
 import Footer from "@/layouts/Footer";
+import Product from "@/pages/Naim/Product";
+import SignUp from "@/pages/Naim/SignUp";
+
+
 
 type Props = {
   children?: ReactNode;
@@ -27,8 +31,15 @@ const Layout = ({ children, title }: Props): JSX.Element => {
         <link rel="shortcut icon" href={`${baseUrl}/img/favicon.png`} type="image/x-icon" />
       </Head>
       <Header />
+
+
+
+        <Product/>
+        <SignUp/>
+
+
       <div className="full">
-        {children}
+        {/* {children} */}
       </div>
       <Footer />
     </>
