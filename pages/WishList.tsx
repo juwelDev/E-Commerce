@@ -1,15 +1,21 @@
 import React from "react";
+import { baseUrl } from "@/config/appConfig";
+import {AiFillHome, AiOutlineRight,AiOutlineHeart} from "react-icons/ai"
+import {FaAddressCard,FaTrash,FaRegCreditCard} from "react-icons/fa"
+import {BsArchiveFill} from "react-icons/bs"
+import {MdOutlineLogout} from "react-icons/md"
+
 
 const WishList = () => {
     return (
         <div>
             <div>
                 <div className="container py-4 flex items-center gap-3">
-        <a href="../index.html" className="text-primary text-base">
-        <i className="fa-solid fa-house" />
+        <a href="../index.html" className="text-red-600 text-base">
+        <AiFillHome/>
         </a>
         <span className="text-sm text-gray-400">
-        <i className="fa-solid fa-chevron-right" />
+        <AiOutlineRight/>
         </span>
         <p className="text-gray-600 font-medium">Profile</p>
     </div>
@@ -21,7 +27,7 @@ const WishList = () => {
         <div className="px-4 py-3 shadow flex items-center gap-4">
             <div className="flex-shrink-0">
             <img
-                src="public\img\avatar.png"
+                src={`${baseUrl}/img/avatar.png`}
                 alt="profile"
                 className="rounded-full w-14 h-14 border border-gray-200 p-1 object-cover"
             />
@@ -33,56 +39,57 @@ const WishList = () => {
         </div>
         <div className="mt-6 bg-white shadow rounded p-4 divide-y divide-gray-200 space-y-4 text-gray-600">
             <div className="space-y-1 pl-8">
-            <a href="#" className="block font-medium capitalize transition">
-                <span className="absolute -left-8 top-0 text-base">
-                <i className="fa-regular fa-address-card" />
+            <a href="#"
+                className="relative hover:text-red-600 block font-medium capitalize transition"
+            >
+                <span className="absolute -left-8 top-1 text-base">
+                <FaAddressCard/>
                 </span>
                 Manage account
             </a>
             <a
                 href="#"
-                className="relative hover:text-primary block capitalize transition"
+                className="relative hover:text-red-600 block capitalize transition"
             >
                 Profile information
             </a>
             <a
                 href="#"
-                className="relative hover:text-primary block capitalize transition"
+                className="relative hover:text-red-600 block capitalize transition"
             >
                 Manage addresses
             </a>
             <a
                 href="#"
-                className="relative hover:text-primary block capitalize transition"
+                className="relative hover:text-red-600 block capitalize transition"
             >
                 Change password
             </a>
             </div>
             <div className="space-y-1 pl-8 pt-4">
-            <a
-                href="#"
-                className="relative hover:text-primary block font-medium capitalize transition"
+            <a href="#"
+                className="relative hover:text-red-600 block font-medium capitalize transition"
             >
-                <span className="absolute -left-8 top-0 text-base">
-                <i className="fa-solid fa-box-archive" />
+                <span className="absolute -left-8 top-1 text-base">
+                <BsArchiveFill />
                 </span>
                 My order history
             </a>
             <a
                 href="#"
-                className="relative hover:text-primary block capitalize transition"
+                className="relative hover:text-red-600 block capitalize transition"
             >
                 My returns
             </a>
             <a
                 href="#"
-                className="relative hover:text-primary block capitalize transition"
+                className="relative hover:text-red-600 block capitalize transition"
             >
                 My Cancellations
             </a>
             <a
                 href="#"
-                className="relative hover:text-primary block capitalize transition"
+                className="relative hover:text-red-600 block capitalize transition"
             >
                 My reviews
             </a>
@@ -90,16 +97,16 @@ const WishList = () => {
             <div className="space-y-1 pl-8 pt-4">
             <a
                 href="#"
-                className="relative hover:text-primary block font-medium capitalize transition"
+                className="relative hover:text-red-600 block font-medium capitalize transition"
             >
-                <span className="absolute -left-8 top-0 text-base">
-                <i className="fa-regular fa-credit-card" />
+                <span className="absolute -left-8 top-1 text-base">
+                <FaRegCreditCard/>
                 </span>
                 Payment methods
             </a>
             <a
                 href="#"
-                className="relative hover:text-primary block capitalize transition"
+                className="relative hover:text-red-600 block capitalize transition"
             >
                 voucher
             </a>
@@ -107,10 +114,10 @@ const WishList = () => {
             <div className="space-y-1 pl-8 pt-4">
             <a
                 href="#"
-                className="relative text-primary block font-medium capitalize transition"
+                className="relative text-red-600 block font-medium capitalize transition"
             >
-                <span className="absolute -left-8 top-0 text-base">
-                <i className="fa-regular fa-heart" />
+                <span className="absolute -left-8 top-1 text-base">
+                <AiOutlineHeart/>
                 </span>
                 My wishlist
             </a>
@@ -118,10 +125,10 @@ const WishList = () => {
             <div className="space-y-1 pl-8 pt-4">
             <a
                 href="#"
-                className="relative hover:text-primary block font-medium capitalize transition"
+                className="relative hover:text-red-600 block font-medium capitalize transition"
             >
-                <span className="absolute -left-8 top-0 text-base">
-                <i className="fa-solid fa-right-from-bracket" />
+                <span className="absolute -left-8 top-1 text-base">
+                <MdOutlineLogout/>
                 </span>
                 Logout
             </a>
@@ -134,8 +141,8 @@ const WishList = () => {
         <div className="flex items-center justify-between border gap-6 p-4 border-gray-200 rounded">
             <div className="w-28">
             <img
-                src="public\img\product\product-6.jpg"
-                alt="product 6"
+                src={`${baseUrl}/img/product/product20.jpg`}
+                alt="product 20"
                 className="w-full"
             />
             </div>
@@ -147,22 +154,22 @@ const WishList = () => {
                 Availability: <span className="text-green-600">In Stock</span>
             </p>
             </div>
-            <div className="text-primary text-lg font-semibold">$320.00</div>
+            <div className="text-red-600 text-lg font-semibold">$320.00</div>
             <a
             href="#"
-            className="px-6 py-2 text-center text-sm text-white bg-primary border border-primary rounded hover:bg-transparent hover:text-primary transition uppercase font-roboto font-medium"
+            className="px-6 py-2 text-center text-sm text-white bg-red-600 border border-red-600 rounded hover:bg-transparent hover:text-red-600 transition uppercase font-roboto font-medium"
             >
             add to cart
             </a>
-            <div className="text-gray-600 cursor-pointer hover:text-primary">
-            <i className="fa-solid fa-trash" />
+            <div className="text-gray-600 cursor-pointer hover:text-red-600">
+            <FaTrash/>
             </div>
         </div>
         <div className="flex items-center justify-between border gap-6 p-4 border-gray-200 rounded">
             <div className="w-28">
             <img
-                src="public\img\product\product-5.jpg"
-                alt="product 6"
+                src={`${baseUrl}/img/product/product21.jpg`}
+                alt="product 21"
                 className="w-full"
             />
             </div>
@@ -174,22 +181,22 @@ const WishList = () => {
                 Availability: <span className="text-green-600">In Stock</span>
             </p>
             </div>
-            <div className="text-primary text-lg font-semibold">$320.00</div>
+            <div className="text-red-600 text-lg font-semibold">$320.00</div>
             <a
             href="#"
-            className="px-6 py-2 text-center text-sm text-white bg-primary border border-primary rounded hover:bg-transparent hover:text-primary transition uppercase font-roboto font-medium"
+            className="px-6 py-2 text-center text-sm text-white bg-red-600 border border-red-600 rounded hover:bg-transparent hover:text-red-600 transition uppercase font-roboto font-medium"
             >
             add to cart
             </a>
-            <div className="text-gray-600 cursor-pointer hover:text-primary">
-            <i className="fa-solid fa-trash" />
+            <div className="text-gray-600 cursor-pointer hover:text-red-600">
+            <FaTrash/>
             </div>
         </div>
         <div className="flex items-center justify-between border gap-6 p-4 border-gray-200 rounded">
             <div className="w-28">
             <img
-                src="public\img\product\product-10.jpg"
-                alt="product 6"
+                src={`${baseUrl}/img/product/product22.jpg`}
+                alt="product 22"
                 className="w-full"
             />
             </div>
@@ -199,15 +206,15 @@ const WishList = () => {
                 Availability: <span className="text-red-600">Out of Stock</span>
             </p>
             </div>
-            <div className="text-primary text-lg font-semibold">$320.00</div>
+            <div className="text-red-600 text-lg font-semibold">$320.00</div>
             <a
             href="#"
             className="cursor-not-allowed px-6 py-2 text-center text-sm text-white bg-red-400 border border-red-400 rounded transition uppercase font-roboto font-medium"
             >
             add to cart
             </a>
-            <div className="text-gray-600 cursor-pointer hover:text-primary">
-            <i className="fa-solid fa-trash" />
+            <div className="text-gray-600 cursor-pointer hover:text-red-600">
+            <FaTrash/>
             </div>
         </div>
         </div>
