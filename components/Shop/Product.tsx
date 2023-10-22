@@ -1,3 +1,8 @@
+import { baseUrl } from "@/config/appConfig";
+import { AiFillStar } from "react-icons/ai";
+import { BsListUl } from "react-icons/bs";
+import { FaLongArrowAltRight } from "react-icons/fa";
+import { LuGripHorizontal } from "react-icons/lu";
 const Product = () => {
   return (
     <>
@@ -16,7 +21,7 @@ const Product = () => {
                     <form className="space-x-2">
                       <input
                         type="checkbox"
-                        className="border border-paragraph rounded-none h-4 w-4 text-accentOne focus:ring-0"
+                        className="border border-paragraph rounded-none h-4 w-4 text-accentOne bg focus:ring-0"
                         id="bedroom"
                         // defaultChecked=""
                       />
@@ -290,9 +295,10 @@ const Product = () => {
                 <div className="flex items-center space-x-3">
                   <div className="rounded-sm py-1 px-3 bg-accentOne text-white cursor-pointer">
                     <i className="fa-solid fa-grip" />
+                    <LuGripHorizontal />
                   </div>
                   <div className="rounded-sm py-1 px-3 border border-separate cursor-pointer">
-                    <i className="fa-solid fa-list" />
+                    <BsListUl />
                   </div>
                 </div>
               </div>
@@ -303,7 +309,7 @@ const Product = () => {
                   {/* product image */}
                   <div className="relative overflow-hidden cursor-pointer">
                     <img
-                      src="images/product/product-6.jpg"
+                      src={`${baseUrl}/img/product/product-1.jpg`}
                       alt=""
                       className="w-full"
                     />
@@ -338,12 +344,12 @@ const Product = () => {
                     </div>
                     {/* Product Rating*/}
                     <div className="flex items-center space-x-3 pl-3 pb-3">
-                      <span className="flex">
-                        <i className="fa-solid fa-star text-accentOne" />
-                        <i className="fa-solid fa-star text-accentOne" />
-                        <i className="fa-solid fa-star text-accentOne" />
-                        <i className="fa-solid fa-star text-accentOne" />
-                        <i className="fa-solid fa-star text-accentOne" />
+                      <span className="flex text-accentOne">
+                        <AiFillStar />
+                        <AiFillStar />
+                        <AiFillStar />
+                        <AiFillStar />
+                        <AiFillStar />
                       </span>
                       <div>
                         <p className="text-paragraph">(150)</p>
@@ -364,7 +370,7 @@ const Product = () => {
                   {/* product image */}
                   <div className="relative overflow-hidden cursor-pointer">
                     <img
-                      src="images/product/product-4.jpg"
+                      src={`${baseUrl}/img/product/product-2.jpg`}
                       alt=""
                       className="w-full"
                     />
@@ -399,12 +405,12 @@ const Product = () => {
                     </div>
                     {/* Product Rating*/}
                     <div className="flex items-center space-x-3 pl-3 pb-3">
-                      <span className="flex">
-                        <i className="fa-solid fa-star text-accentOne" />
-                        <i className="fa-solid fa-star text-accentOne" />
-                        <i className="fa-solid fa-star text-accentOne" />
-                        <i className="fa-solid fa-star text-accentOne" />
-                        <i className="fa-solid fa-star text-accentOne" />
+                      <span className="flex text-accentOne">
+                        <AiFillStar />
+                        <AiFillStar />
+                        <AiFillStar />
+                        <AiFillStar />
+                        <AiFillStar />
                       </span>
                       <div>
                         <p className="text-paragraph">(150)</p>
@@ -425,7 +431,7 @@ const Product = () => {
                   {/* product image */}
                   <div className="relative overflow-hidden cursor-pointer">
                     <img
-                      src="images/product/product-10.jpg"
+                      src={`${baseUrl}/img/product/product-3.jpg`}
                       alt=""
                       className="w-full"
                     />
@@ -460,12 +466,12 @@ const Product = () => {
                     </div>
                     {/* Product Rating*/}
                     <div className="flex items-center space-x-3 pl-3 pb-3">
-                      <span className="flex">
-                        <i className="fa-solid fa-star text-accentOne" />
-                        <i className="fa-solid fa-star text-accentOne" />
-                        <i className="fa-solid fa-star text-accentOne" />
-                        <i className="fa-solid fa-star text-accentOne" />
-                        <i className="fa-solid fa-star text-accentOne" />
+                      <span className="flex text-accentOne">
+                        <AiFillStar />
+                        <AiFillStar />
+                        <AiFillStar />
+                        <AiFillStar />
+                        <AiFillStar />
                       </span>
                       <div>
                         <p className="text-paragraph">(150)</p>
@@ -486,7 +492,7 @@ const Product = () => {
                   {/* product image */}
                   <div className="relative overflow-hidden cursor-pointer">
                     <img
-                      src="images/product/product-12.jpg"
+                      src={`${baseUrl}/img/product/product-4.jpg`}
                       alt=""
                       className="w-full"
                     />
@@ -521,12 +527,12 @@ const Product = () => {
                     </div>
                     {/* Product Rating*/}
                     <div className="flex items-center space-x-3 pl-3 pb-3">
-                      <span className="flex">
-                        <i className="fa-solid fa-star text-accentOne" />
-                        <i className="fa-solid fa-star text-accentOne" />
-                        <i className="fa-solid fa-star text-accentOne" />
-                        <i className="fa-solid fa-star text-accentOne" />
-                        <i className="fa-solid fa-star text-accentOne" />
+                      <span className="flex text-accentOne">
+                        <AiFillStar />
+                        <AiFillStar />
+                        <AiFillStar />
+                        <AiFillStar />
+                        <AiFillStar />
                       </span>
                       <div>
                         <p className="text-paragraph">(150)</p>
@@ -547,7 +553,7 @@ const Product = () => {
                   {/* product image */}
                   <div className="relative overflow-hidden cursor-pointer">
                     <img
-                      src="images/product/product-13.jpg"
+                      src={`${baseUrl}/img/product/product-5.jpg`}
                       alt=""
                       className="w-full"
                     />
@@ -582,12 +588,12 @@ const Product = () => {
                     </div>
                     {/* Product Rating*/}
                     <div className="flex items-center space-x-3 pl-3 pb-3">
-                      <span className="flex">
-                        <i className="fa-solid fa-star text-accentOne" />
-                        <i className="fa-solid fa-star text-accentOne" />
-                        <i className="fa-solid fa-star text-accentOne" />
-                        <i className="fa-solid fa-star text-accentOne" />
-                        <i className="fa-solid fa-star text-accentOne" />
+                      <span className="flex text-accentOne">
+                        <AiFillStar />
+                        <AiFillStar />
+                        <AiFillStar />
+                        <AiFillStar />
+                        <AiFillStar />
                       </span>
                       <div>
                         <p className="text-paragraph">(150)</p>
@@ -608,7 +614,7 @@ const Product = () => {
                   {/* product image */}
                   <div className="relative overflow-hidden cursor-pointer">
                     <img
-                      src="images/product/product-14.jpg"
+                      src={`${baseUrl}/img/product/product-6.jpg`}
                       alt=""
                       className="w-full"
                     />
@@ -643,12 +649,12 @@ const Product = () => {
                     </div>
                     {/* Product Rating*/}
                     <div className="flex items-center space-x-3 pl-3 pb-3">
-                      <span className="flex">
-                        <i className="fa-solid fa-star text-accentOne" />
-                        <i className="fa-solid fa-star text-accentOne" />
-                        <i className="fa-solid fa-star text-accentOne" />
-                        <i className="fa-solid fa-star text-accentOne" />
-                        <i className="fa-solid fa-star text-accentOne" />
+                      <span className="flex text-accentOne">
+                        <AiFillStar />
+                        <AiFillStar />
+                        <AiFillStar />
+                        <AiFillStar />
+                        <AiFillStar />
                       </span>
                       <div>
                         <p className="text-paragraph">(150)</p>
@@ -669,7 +675,7 @@ const Product = () => {
                   {/* product image */}
                   <div className="relative overflow-hidden cursor-pointer">
                     <img
-                      src="images/product/product-15.jpg"
+                      src={`${baseUrl}/img/product/product-7.jpg`}
                       alt=""
                       className="w-full"
                     />
@@ -704,12 +710,12 @@ const Product = () => {
                     </div>
                     {/* Product Rating*/}
                     <div className="flex items-center space-x-3 pl-3 pb-3">
-                      <span className="flex">
-                        <i className="fa-solid fa-star text-accentOne" />
-                        <i className="fa-solid fa-star text-accentOne" />
-                        <i className="fa-solid fa-star text-accentOne" />
-                        <i className="fa-solid fa-star text-accentOne" />
-                        <i className="fa-solid fa-star text-accentOne" />
+                      <span className="flex text-accentOne">
+                        <AiFillStar />
+                        <AiFillStar />
+                        <AiFillStar />
+                        <AiFillStar />
+                        <AiFillStar />
                       </span>
                       <div>
                         <p className="text-paragraph">(150)</p>
@@ -730,7 +736,7 @@ const Product = () => {
                   {/* product image */}
                   <div className="relative overflow-hidden cursor-pointer">
                     <img
-                      src="images/product/product-16.jpg"
+                      src={`${baseUrl}/img/product/product-8.jpg`}
                       alt=""
                       className="w-full"
                     />
@@ -765,12 +771,12 @@ const Product = () => {
                     </div>
                     {/* Product Rating*/}
                     <div className="flex items-center space-x-3 pl-3 pb-3">
-                      <span className="flex">
-                        <i className="fa-solid fa-star text-accentOne" />
-                        <i className="fa-solid fa-star text-accentOne" />
-                        <i className="fa-solid fa-star text-accentOne" />
-                        <i className="fa-solid fa-star text-accentOne" />
-                        <i className="fa-solid fa-star text-accentOne" />
+                      <span className="flex text-accentOne">
+                        <AiFillStar />
+                        <AiFillStar />
+                        <AiFillStar />
+                        <AiFillStar />
+                        <AiFillStar />
                       </span>
                       <div>
                         <p className="text-paragraph">(150)</p>
@@ -791,7 +797,7 @@ const Product = () => {
                   {/* product image */}
                   <div className="relative overflow-hidden cursor-pointer">
                     <img
-                      src="images/product/product-17.jpg"
+                      src={`${baseUrl}/img/product/product-9.jpg`}
                       alt=""
                       className="w-full"
                     />
@@ -826,12 +832,12 @@ const Product = () => {
                     </div>
                     {/* Product Rating*/}
                     <div className="flex items-center space-x-3 pl-3 pb-3">
-                      <span className="flex">
-                        <i className="fa-solid fa-star text-accentOne" />
-                        <i className="fa-solid fa-star text-accentOne" />
-                        <i className="fa-solid fa-star text-accentOne" />
-                        <i className="fa-solid fa-star text-accentOne" />
-                        <i className="fa-solid fa-star text-accentOne" />
+                      <span className="flex text-accentOne">
+                        <AiFillStar />
+                        <AiFillStar />
+                        <AiFillStar />
+                        <AiFillStar />
+                        <AiFillStar />
                       </span>
                       <div>
                         <p className="text-paragraph">(150)</p>
@@ -862,8 +868,8 @@ const Product = () => {
                 <div className="h-5 w-5 rounded-sm border border-separatorColor flex items-center justify-center px-4 py-4 bg-white hover:bg-accentOne  transition duration-500 cursor-pointer">
                   4
                 </div>
-                <div className="h-5 w-5 rounded-sm border border-separatorColor flex items-center justify-center px-4 py-4 bg-white hover:bg-accentOne  transition duration-500 cursor-pointer">
-                  <i className="fa-solid fa-arrow-right-long" />
+                <div className=" rounded-sm border border-separatorColor flex items-center justify-center px-4 py-4 bg-white hover:bg-accentOne  transition duration-500 cursor-pointer">
+                  <FaLongArrowAltRight />
                 </div>
               </div>
             </div>
