@@ -1,3 +1,7 @@
+import React from "react";
+import Link from "next/link";
+
+import { baseUrl } from "@/config/appConfig";
 import Layout from "@/layouts/Layout";
 
 const login = () => {
@@ -11,12 +15,12 @@ const login = () => {
             </h2>
             <p className="text-center text-gray-500 mb-6">
               or{" "}
-              <a
-                href="/src/signup.html"
+              <Link
+                href={`${baseUrl}/register`}
                 className="text-sm text-purple-700 hover:text-purple-600"
               >
                 create new account
-              </a>
+              </Link>
             </p>
             <div className="mb-4">
               <div className="mb-6">

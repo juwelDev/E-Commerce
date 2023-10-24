@@ -1,5 +1,5 @@
-import Head from "next/head";
 import React, { ReactNode, useEffect } from "react";
+import Head from "next/head";
 import { baseUrl } from '@/config/appConfig';
 import Header from "@/layouts/Header";
 import Footer from "@/layouts/Footer";

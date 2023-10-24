@@ -1,8 +1,9 @@
+import React from "react";
+import Link from "next/link";
+
 import { baseUrl } from "@/config/appConfig";
 import { FaBars, FaBed, FaUtensils } from "react-icons/fa";
 import { FaMattressPillow } from "react-icons/fa6";
-
-
 
 const Header = () => {
   return (
@@ -13,13 +14,13 @@ const Header = () => {
           <div className="row flex items-center justify-between py-3">
             {/* Col 1 */}
             <div>
-              <a href="index.html">
+              <Link href="/">
                 <img
                   src={`${baseUrl}/img/logo/logo.png`}
                   alt="website-logo"
                   className="w-24"
                 />
-              </a>
+              </Link>
             </div>
             {/* Col 2 */}
             <div>
@@ -46,23 +47,29 @@ const Header = () => {
             {/* Col 3*/}
             <div className="flex space-x-3">
               <div className="relative flex flex-col items-center cursor-pointer">
+                <Link href={`${baseUrl}/wishlist`}>
                 <img src={`${baseUrl}/img/icon/heart.svg`} alt="" />
-                <span className="bg-accentOne h-5 w-5 flex items-center justify-center rounded-full absolute -top-2 left-8">
+                <span className="bg-accentOne h-5 w-5 flex items-center justify-center rounded-full absolute -top-2 left-4">
                   8
                 </span>
-                
-                <a href="WishList">WishList</a>
+
+                <p>WishList</p>
+                </Link>
               </div>
               <div className="relative flex flex-col items-center cursor-pointer">
-                <img src={`${baseUrl}/img/icon/shopping-cart.svg`} alt="" />
-                <span className="bg-accentOne h-5 w-5 flex items-center justify-center rounded-full absolute -top-2 left-4">
-                  5
-                </span>
-                <p>Cart</p>
+                <Link href={`${baseUrl}/cart`}>
+                  <img src={`${baseUrl}/img/icon/shopping-cart.svg`} alt="" />
+                  <span className="bg-accentOne h-5 w-5 flex items-center justify-center rounded-full absolute -top-2 left-4">
+                    5
+                  </span>
+                  <p>Cart</p>
+                </Link>
               </div>
               <div className=" flex flex-col items-center cursor-pointer">
+                <Link href={`${baseUrl}/login`}>
                 <img src={`${baseUrl}/img/icon/user.svg`} alt="" />
                 <p>Account</p>
+                </Link>
               </div>
             </div>
           </div>
@@ -77,46 +84,46 @@ const Header = () => {
             {/* Col 1 */}
             <div className="relative group">
               <div className="bg-accentOne">
-                <a href="#" className="flex items-center space-x-2 px-5 py-3">
+                <Link href="#" className="flex items-center space-x-2 px-5 py-3">
                   <span>
                     <i className="fa-solid fa-bars text-white" />
                     <FaBars className="text-white" />
                   </span>
                   <span>All Categories</span>
-                </a>
+                </Link>
               </div>
               {/* Dropdown Menu */}
               <div className="text-primary absolute bg-white w-full shadow-md divide-y divide-dashed divide-separatorColor opacity-0 invisible group-hover:opacity-100 group-hover:visible transition duration-500">
-                <a href="#" className="flex items-center space-x-2 px-5 py-3">
+                <Link href="#" className="flex items-center space-x-2 px-5 py-3">
                   <span>
                     <FaBed className="text-accentOne" />
                   </span>
                   <span>Bedroom</span>
-                </a>
-                <a href="#" className="flex items-center space-x-2 px-5 py-3">
+                </Link>
+                <Link href="#" className="flex items-center space-x-2 px-5 py-3">
                   <span>
                     <FaMattressPillow className="text-accentOne" />
                   </span>
                   <span>Mattress</span>
-                </a>
-                <a href="#" className="flex items-center space-x-2 px-5 py-3">
+                </Link>
+                <Link href="#" className="flex items-center space-x-2 px-5 py-3">
                   <span>
                     <FaUtensils className="text-accentOne" />
                   </span>
                   <span>Dinning</span>
-                </a>
+                </Link>
               </div>
             </div>
             {/* Col 2 */}
             <div className="flex justify-between flex-grow">
               <div className="space-x-5">
-                <a href="index.html">Home</a>
-                <a href="shop">Shop</a>
-                <a href="#">About Us</a>
-                <a href="#">Contact Us</a>
+                <Link href={`${baseUrl}/`}>Home</Link>
+                <Link href={`${baseUrl}/shop`}>Shop</Link>
+                <Link href={`${baseUrl}/about-us`}>About Us</Link>
+                <Link href={`${baseUrl}/contact-us`}>Contact Us</Link>
               </div>
               <div>
-                <a href="#">Login/Register</a>
+                <Link href={`${baseUrl}/login`}>Login/Register</Link>
               </div>
             </div>
           </div>
