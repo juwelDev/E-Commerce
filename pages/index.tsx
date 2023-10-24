@@ -9,6 +9,7 @@ import NewArrival from "@/components/Home/NewArrival";
 import WebFetchers from "@/components/Home/WebFetchers";
 import Offers from "@/components/Home/Offers";
 
+
 const HomePage = () => {
   return (
     <Layout>
@@ -19,7 +20,7 @@ const HomePage = () => {
       {/* Top Banner */}
       <TopSlider />
       {/* Top Banner */}
-
+      
       {/* Main Start */}
 
       <div className="w-full pt-24">
