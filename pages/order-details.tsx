@@ -1,3 +1,7 @@
+import React from "react";
+import { baseUrl } from '@/config/appConfig';
+
+
 const orderDetails =()=>{
     return(
         <>
@@ -37,7 +41,7 @@ const orderDetails =()=>{
         {/* Product Item */}
         <div className="flex gap-6">
           <div className="w-16 h-16 flex items-center border border-gray-300">
-            <img src="/src/img/1_1.jpg" alt="" />
+            <img src={`${baseUrl}/img/1_1.jpg`} alt="" />
           </div>
           <div className="flex-1 flex flex-col justify-between pb-3">
             <h3 className="text-ellipsis mb-4">
@@ -54,7 +58,7 @@ const orderDetails =()=>{
         {/* Product Item */}
         <div className="flex gap-6">
           <div className="w-16 h-16 flex items-center border border-gray-300">
-            <img src="/src/img/1_1.jpg" alt="" />
+            <img src={`${baseUrl}/img/1_2.jpg`} alt="" />
           </div>
           <div className="flex-1 flex flex-col justify-between pb-3">
             <h3 className="text-ellipsis mb-4">
@@ -71,7 +75,7 @@ const orderDetails =()=>{
         {/* Product Item */}
         <div className="flex gap-6">
           <div className="w-16 h-16 flex items-center border border-gray-300">
-            <img src="/src/img/1_1.jpg" alt="" />
+            <img src={`${baseUrl}/img/1_3.jpg`} alt="" />
           </div>
           <div className="flex-1 flex flex-col justify-between pb-3">
             <h3 className="text-ellipsis mb-4">
