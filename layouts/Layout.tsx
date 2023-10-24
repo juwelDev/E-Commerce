@@ -3,8 +3,8 @@ import React, { ReactNode, useEffect } from "react";
 import { baseUrl } from '@/config/appConfig';
 import Header from "@/layouts/Header";
 import Footer from "@/layouts/Footer";
-import Product from "@/pages/Naim/Product";
-import SignUp from "@/pages/Naim/SignUp";
+
+
 
 
 
@@ -32,14 +32,8 @@ const Layout = ({ children, title }: Props): JSX.Element => {
       </Head>
       <Header />
 
-
-
-        <Product/>
-        <SignUp/>
-
-
       <div className="full">
-        {/* {children} */}
+        {children}
       </div>
       <Footer />
     </>

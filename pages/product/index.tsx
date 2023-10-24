@@ -1,41 +1,19 @@
-import React from 'react';
+import React from "react";
+import Head from 'next/head'
+import { baseUrl } from "@/config/appConfig";
+import Layout from "@/layouts/Layout"
 
-const Product = () => {
-
-
+const ProductPage = () => {
 
     return (
-        <main className="p-5">
+      <Layout>
+      <main className="p-5">
         <div className="container mx-auto">
           <div className="grid gap-6 grid-cols-1 lg:grid-cols-5">
             <div className="lg:col-span-3">
-              <div x-data="{
-
-        images: ['img/1_1.jpg', 'img/1_2.jpg', 'img/1_3.jpg', 'img/1_4.jpg'],
-
-
-        activeImage: null,
-        prev() {
-            let index = this.images.indexOf(this.activeImage);
-            if (index === 0) 
-                index = this.images.length;
-            this.activeImage = this.images[index - 1];
-        },
-        next() {
-            let index = this.images.indexOf(this.activeImage);
-            if (index === this.images.length - 1) 
-                index = -1;
-            this.activeImage = this.images[index + 1];
-        },
-        init() {
-            this.activeImage = this.images.length > 0 ? this.images[0] : null
-        }
-        }">
-
-
-
+              <div>
                 <div className="relative">
-                  <template x-for="image in images" />
+                  <div/>
                   <a  className="cursor-pointer bg-black/30 text-white absolute left-0 top-1/2 -translate-y-1/2">
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                       <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
@@ -48,7 +26,7 @@ const Product = () => {
                   </a>
                 </div>
                 <div className="flex">
-                  <template x-for="image in images" />
+                  <template />
                 </div>
               </div>
             </div>
@@ -160,24 +138,15 @@ const Product = () => {
                   </ul>
                 </div>
                 <p className="text-right">
-                  <button  onClick={()=> alert("hi")}  className="text-purple-500 hover:text-purple-700 ">Read More</button>
+                  <button  className="text-purple-500 hover:text-purple-700 ">Read More</button>
                 </p>
               </div>
             </div>
           </div>
         </div>
       </main>
-
-
-
-
-
-
-
-
-
-
+      </Layout>
     );
 };
 
-export default Product;
+export default ProductPage;
