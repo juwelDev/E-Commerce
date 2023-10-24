@@ -4,6 +4,10 @@ import { baseUrl } from '@/config/appConfig';
 import Header from "@/layouts/Header";
 import Footer from "@/layouts/Footer";
 
+
+
+
+
 type Props = {
   children?: ReactNode;
   title?: string;
@@ -27,6 +31,7 @@ const Layout = ({ children, title }: Props): JSX.Element => {
         <link rel="shortcut icon" href={`${baseUrl}/img/favicon.png`} type="image/x-icon" />
       </Head>
       <Header />
+
       <div className="full">
         {children}
       </div>
