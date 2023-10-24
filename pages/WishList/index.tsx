@@ -4,91 +4,67 @@ import {AiFillHome, AiOutlineRight,AiOutlineHeart} from "react-icons/ai"
 import {FaAddressCard,FaTrash,FaRegCreditCard} from "react-icons/fa"
 import {BsArchiveFill} from "react-icons/bs"
 import {MdOutlineLogout} from "react-icons/md"
+import Layout from "@/layouts/Layout";
 
 
 const WishList = () => {
     return (
+        <Layout>
         <div>
             <div>
                 <div className="container py-4 flex items-center gap-3">
-        <a href="../index.html" className="text-red-600 text-base">
-        <AiFillHome/>
-        </a>
-        <span className="text-sm text-gray-400">
-        <AiOutlineRight/>
-        </span>
-        <p className="text-gray-600 font-medium">Profile</p>
-    </div>
+                    <a href="../index.html" className="text-red-600 text-base">
+                    <AiFillHome/>
+                    </a>
+                    <span className="text-sm text-gray-400">
+                    <AiOutlineRight/>
+                    </span>
+                    <p className="text-gray-600 font-medium">Profile</p>
+                </div>
     {/* ./breadcrumb */}
     {/* wrapper */}
-    <div className="container grid grid-cols-12 items-start gap-6 pt-4 pb-16">
+        <div className="container grid grid-cols-12 items-start gap-6 pt-4 pb-16">
         {/* sidebar */}
         <div className="col-span-3">
-        <div className="px-4 py-3 shadow flex items-center gap-4">
-            <div className="flex-shrink-0">
-            <img
-                src={`${baseUrl}/img/avatar.png`}
-                alt="profile"
-                className="rounded-full w-14 h-14 border border-gray-200 p-1 object-cover"
-            />
+            <div className="px-4 py-3 shadow flex items-center gap-4">
+                <div className="flex-shrink-0">
+                    <img src={`${baseUrl}/img/avatar.png`}
+                    alt="profile"
+                    className="rounded-full w-14 h-14 border border-gray-200 p-1 object-cover"/>
+                </div>
+                <div className="flex-grow">
+                    <p className="text-gray-600">Hello,</p>
+                    <h4 className="text-gray-800 font-medium">John Doe</h4>
+                </div>
             </div>
-            <div className="flex-grow">
-            <p className="text-gray-600">Hello,</p>
-            <h4 className="text-gray-800 font-medium">John Doe</h4>
-            </div>
-        </div>
         <div className="mt-6 bg-white shadow rounded p-4 divide-y divide-gray-200 space-y-4 text-gray-600">
             <div className="space-y-1 pl-8">
-            <a href="#"
-                className="relative hover:text-red-600 block font-medium capitalize transition"
-            >
-                <span className="absolute -left-8 top-1 text-base">
-                <FaAddressCard/>
-                </span>
-                Manage account
-            </a>
-            <a
-                href="#"
-                className="relative hover:text-red-600 block capitalize transition"
-            >
-                Profile information
-            </a>
-            <a
-                href="#"
-                className="relative hover:text-red-600 block capitalize transition"
-            >
-                Manage addresses
-            </a>
-            <a
-                href="#"
-                className="relative hover:text-red-600 block capitalize transition"
-            >
-                Change password
-            </a>
+                <a href="#" className="relative hover:text-red-600 block font-medium capitalize transition">
+                    <span className="absolute -left-8 top-1 text-base">
+                    <FaAddressCard/></span>
+                    Manage account </a>
+                <a href="#"
+                    className="relative hover:text-red-600 block capitalize transition">
+                    Profile information </a>
+                <a href="#"
+                    className="relative hover:text-red-600 block capitalize transition">
+                    Manage addresses </a>
+                <a href="#"
+                    className="relative hover:text-red-600 block capitalize transition">
+                    Change password </a>
             </div>
             <div className="space-y-1 pl-8 pt-4">
-            <a href="#"
-                className="relative hover:text-red-600 block font-medium capitalize transition"
-            >
+            <a href="#" className="relative hover:text-red-600 block font-medium capitalize transition">
                 <span className="absolute -left-8 top-1 text-base">
-                <BsArchiveFill />
-                </span>
-                My order history
-            </a>
-            <a
-                href="#"
-                className="relative hover:text-red-600 block capitalize transition"
-            >
-                My returns
-            </a>
-            <a
-                href="#"
-                className="relative hover:text-red-600 block capitalize transition"
-            >
-                My Cancellations
-            </a>
-            <a
-                href="#"
+                <BsArchiveFill /></span>
+                My order history </a>
+            <a href="#"
+                className="relative hover:text-red-600 block capitalize transition" >
+                My returns </a>
+            <a href="#"
+                className="relative hover:text-red-600 block capitalize transition">
+                My Cancellations </a>
+            <a href="#"
                 className="relative hover:text-red-600 block capitalize transition"
             >
                 My reviews
@@ -227,6 +203,7 @@ const WishList = () => {
             <div></div>
             <div></div>
         </div>
+        </Layout>
     )
 }
 
