@@ -1,7 +1,8 @@
+import Layout from "@/layouts/Layout";
 import React from "react";
 const orders = () => {
     return (
-        
+        <Layout>
 <main className="h-screen p-5 bg-slate-300">
   <div className="container lg:w-2/3 xl:w-2/3 mx-auto">
     <h1 className="text-3xl font-bold mb-6">My Orders</h1>
@@ -288,7 +289,7 @@ const orders = () => {
     </div>
   </div>
 </main>
-
+</Layout>
         
     )
 }
