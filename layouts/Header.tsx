@@ -1,15 +1,52 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
+import { useTheme } from "next-themes";
 
 import { baseUrl } from "@/config/appConfig";
-import { FaBars, FaBed, FaUtensils } from "react-icons/fa";
+import { FaBars, FaBed, FaCartPlus, FaRegHeart, FaUser, FaUtensils } from "react-icons/fa";
 import { FaMattressPillow } from "react-icons/fa6";
+import { BsFillSunFill, BsMoonStarsFill } from "react-icons/bs";
 
 const Header = () => {
+  const { systemTheme, theme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, [])
+
+  const renderThemeMode = () => {
+    if (!mounted) return null;
+
+    const currentTheme = theme === "system" ? systemTheme : theme;
+
+    if (currentTheme === "dark") {
+      return (
+        <button className="w-8 h-8 focus:outline-none flex items-center">
+          <BsFillSunFill
+            className="ml-1 w-6 h-6 text-yellow-400  dark:text-white"
+            role="button"
+            onClick={() => setTheme("light")}
+          />
+        </button>
+      );
+    } else {
+      return (
+        <button className="w-8 h-8 focus:outline-none flex items-center">
+          <BsMoonStarsFill
+            className="ml-1 w-6 h-6 text-gray-700 dark:text-white"
+            role="button"
+            onClick={() => setTheme("dark")}
+          />
+        </button>
+      );
+    }
+  };
+
   return (
     <>
       {/* Start Header */}
-      <header>
+      <header className="bg-gray-50 dark:bg-gray-600">
         <div className="container">
           <div className="row flex items-center justify-between py-3">
             {/* Col 1 */}
@@ -48,27 +85,29 @@ const Header = () => {
             <div className="flex space-x-3">
               <div className="relative flex flex-col items-center cursor-pointer">
                 <Link href={`${baseUrl}/wishlist`}>
-                <img src={`${baseUrl}/img/icon/heart.svg`} alt="" />
-                <span className="bg-accentOne h-5 w-5 flex items-center justify-center rounded-full absolute -top-2 left-4">
-                  8
-                </span>
-
-                <p>WishList</p>
+                  <FaRegHeart className="text-[24px] text-black dark:text-white"/>
+                  <span className="bg-accentOne h-5 w-5 flex items-center justify-center rounded-full absolute -top-2 left-4">
+                    8
+                  </span>
+                  <p className="text-black dark:text-white">WishList</p>
                 </Link>
               </div>
               <div className="relative flex flex-col items-center cursor-pointer">
                 <Link href={`${baseUrl}/cart`}>
-                  <img src={`${baseUrl}/img/icon/shopping-cart.svg`} alt="" />
+                  <FaCartPlus className="text-[24px] text-black dark:text-white"/>
                   <span className="bg-accentOne h-5 w-5 flex items-center justify-center rounded-full absolute -top-2 left-4">
                     5
                   </span>
-                  <p>Cart</p>
+                  <p className="text-black dark:text-white">Cart</p>
                 </Link>
+              </div>
+              <div className="relative flex flex-col items-center cursor-pointer">
+                {renderThemeMode()}
               </div>
               <div className=" flex flex-col items-center cursor-pointer">
                 <Link href={`${baseUrl}/login`}>
-                <img src={`${baseUrl}/img/icon/user.svg`} alt="" />
-                <p>Account</p>
+                  <FaUser className="text-[24px] text-black dark:text-white"/>
+                  <p className="text-black dark:text-white">Account</p>
                 </Link>
               </div>
             </div>
