@@ -1,10 +1,12 @@
 import React from "react";
 import Head from 'next/head'
+import Link from "next/link";
+
 import { baseUrl } from "@/config/appConfig";
 import Layout from "@/layouts/Layout"
 
 
-const SignUpPage = () => {
+const RegisterPage = () => {
   return (
     <Layout>
       <main className="p-5">
@@ -12,7 +14,8 @@ const SignUpPage = () => {
           <h2 className="text-2xl font-semibold text-center mb-4">Create an account</h2>
           <p className="text-center text-gray-500 mb-3">
             or
-            <a href="/src/login.html" className="text-sm text-purple-700 hover:text-purple-600">login with existing account</a>
+            <Link
+                href={`${baseUrl}/login`} className="text-sm text-purple-700 hover:text-purple-600">login with existing account</Link>
           </p>
           <div className="mb-4">
             <input placeholder="Your name" type="text" name="name" x-model="form.name" className="border-gray-300 p-2 focus:outline-none  rounded-md w-full" />
@@ -40,4 +43,4 @@ const SignUpPage = () => {
   );
 };
 
-export default SignUpPage;
+export default RegisterPage;

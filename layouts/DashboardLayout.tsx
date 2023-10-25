@@ -1,15 +1,15 @@
 import React, { ReactNode, useEffect } from "react";
 import Head from "next/head";
 import { baseUrl } from '@/config/appConfig';
-import Header from "@/layouts/Header";
-import Footer from "@/layouts/Footer";
+import DashboardHeader from "@/layouts/DashboardHeader";
+import DashboardFooter from "@/layouts/DashboardFooter";
 
 type Props = {
   children?: ReactNode;
   title?: string;
 };
 
-const Layout = ({ children, title }: Props): JSX.Element => {
+const DashboardLayout = ({ children, title }: Props): JSX.Element => {
 
   useEffect(() => {
     document.body.classList.add("w-screen");
@@ -26,14 +26,14 @@ const Layout = ({ children, title }: Props): JSX.Element => {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="shortcut icon" href={`${baseUrl}/img/favicon.png`} type="image/x-icon" />
       </Head>
-      <Header />
+      <DashboardHeader />
 
       <div className="full">
         {children}
       </div>
-      <Footer />
+      <DashboardFooter />
     </>
   );
 };
 
-export default Layout;
+export default DashboardLayout;
