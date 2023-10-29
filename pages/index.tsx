@@ -32,7 +32,7 @@ const HomePage = () => {
       </div>
 
       <div className="w-full pt-24">
-         <Categorys />
+        <Categorys />
       </div>
 
       <div className="w-full pt-24">

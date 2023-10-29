@@ -26,7 +26,7 @@ const DashboardHeader = () => {
       </button>
       {/* Hamburger Toggle BTN */}
       <a className="block flex-shrink-0 lg:hidden" href="index.html">
-        <img src="./images/logo/logo-icon.svg" alt="Logo" />
+        <img src={`${baseUrl}/img/logo/logo.svg`} alt="Logo" />
       </a>
     </div>
     <div className="hidden sm:block">
@@ -137,18 +137,22 @@ const DashboardHeader = () => {
             x-show="dropdownOpen"
             className="absolute -right-27 mt-2.5 flex h-90 w-75 flex-col rounded-sm border border-stroke bg-white shadow-default dark:border-strokedark dark:bg-boxdark sm:right-0 sm:w-80"
           >
-            <div className="px-4.5 py-3">
+            
+            <div className="px-4.5 py-3 ">
               <h5 className="text-sm font-medium text-bodydark2">
                 Notification
               </h5>
+              
             </div>
+            
             <ul className="flex h-auto flex-col overflow-y-auto">
-              <li>
+              <li>                     
+                
                 <a
                   className="flex flex-col gap-2.5 border-t border-stroke px-4.5 py-3 hover:bg-gray-2 dark:border-strokedark dark:hover:bg-meta-4"
-                  href="#"
-                >
+                  href="#">
                   <p className="text-sm">
+
                     <span className="text-black dark:text-white">
                       Edit your information in a swipe
                     </span>
@@ -203,9 +207,12 @@ const DashboardHeader = () => {
                 </a>
               </li>
             </ul>
+            
           </div>
+          
           {/* Dropdown End */}
         </li>
+      
         {/* Notification Menu Area */}
         {/* Chat Notification Area */}
         <li
@@ -245,6 +252,7 @@ const DashboardHeader = () => {
               />
             </svg>
           </a>
+        
           {/* Dropdown Start */}
           <div
             x-show="dropdownOpen"
@@ -253,6 +261,7 @@ const DashboardHeader = () => {
             <div className="px-4.5 py-3">
               <h5 className="text-sm font-medium text-bodydark2">Messages</h5>
             </div>
+            
             <ul className="flex h-auto flex-col overflow-y-auto">
               <li>
                 <a
@@ -260,7 +269,7 @@ const DashboardHeader = () => {
                   href="messages.html"
                 >
                   <div className="h-12.5 w-12.5 rounded-full">
-                    <img src="./images/user/user-02.png" alt="User" />
+                  <img src={`${baseUrl}/img/user/user-02.png`} alt="Logo" />
                   </div>
                   <div>
                     <h6 className="text-sm font-medium text-black dark:text-white">
@@ -277,7 +286,7 @@ const DashboardHeader = () => {
                   href="messages.html"
                 >
                   <div className="h-12.5 w-12.5 rounded-full">
-                    <img src="./images/user/user-01.png" alt="User" />
+                    <img src={`${baseUrl}/img/user/user-01.png`} alt="Logo" />
                   </div>
                   <div>
                     <h6 className="text-sm font-medium text-black dark:text-white">
@@ -294,7 +303,7 @@ const DashboardHeader = () => {
                   href="messages.html"
                 >
                   <div className="h-12.5 w-12.5 rounded-full">
-                    <img src="./images/user/user-03.png" alt="User" />
+                  <img src={`${baseUrl}/img/user/user-03.png`} alt="Logo" />
                   </div>
                   <div>
                     <h6 className="text-sm font-medium text-black dark:text-white">
@@ -311,7 +320,7 @@ const DashboardHeader = () => {
                   href="messages.html"
                 >
                   <div className="h-12.5 w-12.5 rounded-full">
-                    <img src="./images/user/user-04.png" alt="User" />
+                  <img src={`${baseUrl}/img/user/user-04.png`} alt="Logo" />
                   </div>
                   <div>
                     <h6 className="text-sm font-medium text-black dark:text-white">
@@ -328,7 +337,7 @@ const DashboardHeader = () => {
                   href="messages.html"
                 >
                   <div className="h-12.5 w-12.5 rounded-full">
-                    <img src="./images/user/user-02.png" alt="User" />
+                  <img src={`${baseUrl}/img/user/user-02.png`} alt="Logo" />
                   </div>
                   <div>
                     <h6 className="text-sm font-medium text-black dark:text-white">
@@ -340,6 +349,7 @@ const DashboardHeader = () => {
                 </a>
               </li>
             </ul>
+            
           </div>
           {/* Dropdown End */}
         </li>
@@ -355,7 +365,7 @@ const DashboardHeader = () => {
             <span className="block text-xs font-medium">UX Designer</span>
           </span>
           <span className="h-12 w-12 rounded-full">
-            <img src="./images/user/user-01.png" alt="User" />
+          <img src={`${baseUrl}/img/user/user-01.png`} alt="Logo" />
           </span>
           <svg
             className="hidden fill-current sm:block"
