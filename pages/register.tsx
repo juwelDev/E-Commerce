@@ -2,6 +2,11 @@ import React, { FormEvent, useState } from "react";
 import Head from 'next/head'
 import Link from "next/link";
 
+
+
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 import { baseUrl } from "@/config/appConfig";
 import Layout from "@/layouts/Layout"
 import InputText from "@/components/Inputs/InputText";
@@ -91,6 +96,11 @@ const RegisterPage = () => {
         });
         const result = await register.json();
 
+        if(result.status == true){
+          toast.success(result.message);
+        }else{
+          toast.error(result.message);
+        }
 
         console.log('user register', result)
 

@@ -24,13 +24,19 @@ export default async function userLogin(req: NextApiRequest, res: NextApiRespons
             const { email, password } = body;
 
             if (!email || !password) {
-                return res.status(422).json({ status: false, error: "please ass all the fields" })
+                return res.status(422).json({
+                    status: false,
+                    message: "please assign all the fields"
+                })
             }
 
             const user = await User.findOne({ email })
 
             if (!user) {
-                return res.status(404).json({ status: false, error: "Login details don't match" })
+                return res.status(404).json({
+                    status: false,
+                    message: "Login details don't match"
+                })
             }
 
             const doMatch = await bcrypt.compare(password, user.password);
@@ -41,7 +47,10 @@ export default async function userLogin(req: NextApiRequest, res: NextApiRespons
                 })
 
                 if (!doMatch) {
-                    return res.status(401).json({ status: false, error: "Login details don't match" })
+                    return res.status(401).json({
+                        status: false,
+                        message: "Login password don't match"
+                    });
                 }
 
                 const { _id, firstName, lastName, email, phone, address, address2, city, state, postcode, userRole, profile_avatar, date_at } = user;
@@ -49,11 +58,14 @@ export default async function userLogin(req: NextApiRequest, res: NextApiRespons
                 res.status(201).json({
                     status: true,
                     token,
-                    user: { _id, firstName, lastName, email, phone, address, address2, city, state, postcode, location, userRole, profile_avatar, date_at },
+                    user: { _id, firstName, lastName, email, phone, address, address2, city, state, postcode, userRole, profile_avatar, date_at },
                     message: "login successful",
                 })
             } else {
-                return res.status(404).json({ status: false, error: "Login details don't match" })
+                return res.status(404).json({
+                    status: false,
+                    message: "Login password don't match"
+                })
             }
 
         } catch (err) {
