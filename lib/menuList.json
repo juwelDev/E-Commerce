@@ -1,0 +1,51 @@
+[
+    {
+        "id": 1,
+        "title": "Products",
+        "url": "/products",
+        "icon": "BsBoxSeam",
+        "sub": [
+            {
+                "id": 1,
+                "title": "All Products",
+                "url": "/products"
+            },
+            {
+                "id": 2,
+                "title": "Add Product",
+                "url": "/products/add-product"
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "title": "Orders",
+        "url": "/orders",
+        "icon": "BsBasket",
+        "sub": [
+            {
+                "id": 3,
+                "title": "All orders",
+                "url": "/orders"
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "title": "Users",
+        "url": "/users",
+        "icon": "FaUsers",
+        "sub": [
+            {
+                "id": 4,
+                "title": "All Users",
+                "url": "/users"
+            },
+            {
+                "id": 5,
+                "title": "Add User",
+                "url": "/users/add-users"
+            }
+        ]
+    }
+]
