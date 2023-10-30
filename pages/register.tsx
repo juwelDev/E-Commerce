@@ -8,7 +8,6 @@ import Layout from "@/layouts/Layout"
 
 const RegisterPage = () => {
 
-
   return (
     <Layout>
       <main className="p-5">
