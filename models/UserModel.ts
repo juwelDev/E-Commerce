@@ -71,7 +71,7 @@ const userSchema: Schema = new Schema({
         default: "Bangladesh",
     },
     userRole: { type: String, default: "user", },
-    profile_avatar: { type: String, default: "https://chahidabd24.com/images/profile_avatar.png", },
+    profile_avatar: { type: String, default: "https://cdn-icons-png.flaticon.com/512/2202/2202112.png", },
     date_at: { type: String, default: date_at, },
     resetToken: { type: String },
     validEmail: { type: String, default: "not", },
