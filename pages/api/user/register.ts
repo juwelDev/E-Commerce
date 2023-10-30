@@ -4,7 +4,7 @@ import jwt from "jsonwebtoken"
 import absoluteUrl from "next-absolute-url"
 import { connectbd } from "@/lib/dbConnect"
 import { User } from "@/models/index"
-import { UserModel } from "@/models/UserModel";
+import { UserModel } from "@/models/index";
 import { sendEmail } from "@/helpers/sendMail"
 
 export default async function userRegister(req: NextApiRequest, res: NextApiResponse) {
@@ -18,14 +18,17 @@ export default async function userRegister(req: NextApiRequest, res: NextApiResp
 
             const body: UserModel = JSON.parse(req.body)
 
-            const { firstName, lastName, email, phone, password } = body;
+            const { firstName, lastName, email, password } = body;
 
             const user = await User.findOne({ email: email })
 
             console.log('user :', user);
 
             if (user) {
-                return res.status(422).json({ status: false, error: "This account is already exists!!!" })
+                return res.status(422).json({
+                    status: false,
+                    message: "This account is already exists!!!"
+                })
             }
 
             const HashedPassword = await bcrypt.hash(password, 12);
@@ -34,7 +37,7 @@ export default async function userRegister(req: NextApiRequest, res: NextApiResp
                 firstName: firstName,
                 lastName: lastName,
                 email: email,
-                phone: phone,
+                phone: "",
                 password: HashedPassword,
                 dob: "",
                 company: "",
@@ -44,7 +47,6 @@ export default async function userRegister(req: NextApiRequest, res: NextApiResp
                 state: "",
                 postcode: "",
                 country: "Bangladesh",
-                location: location,
             }).save()
 
             // console.log('newUser :- ', newUser);
@@ -73,7 +75,7 @@ export default async function userRegister(req: NextApiRequest, res: NextApiResp
                 text: message,
             })
 
-            return res.status(200).json({
+            return res.status(201).json({
                 status: true,
                 message: "Your account is registered successfully!",
             })

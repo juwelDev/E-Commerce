@@ -19,6 +19,7 @@ const Input: React.FC<InputProps> = (props: InputProps) => {
     name = "",
     error,
   } = props;
+  
   function triggerOnChangeEvent(e: React.ChangeEvent<HTMLInputElement>) {
     onChange(e);
   }
