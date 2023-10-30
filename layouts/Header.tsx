@@ -8,6 +8,16 @@ import { FaBars, FaBed, FaCartPlus, FaRegHeart, FaUser, FaUtensils } from "react
 import { FaMattressPillow } from "react-icons/fa6";
 import { BsFillSunFill, BsMoonStarsFill } from "react-icons/bs";
 import { UserModel } from "@/models";
+import UserProfileTop from "@/components/User/UserProfileTop";
+
+type User = {
+  id: number;
+  firstName: string;
+  lastName: string;
+  email: string;
+  profile_avatar: string;
+  userRole: string;
+};
 
 const Header = () => {
 
@@ -17,19 +27,31 @@ const Header = () => {
 
   const { systemTheme, theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
-  const [userInfo, setUserInfo] = useState([] as unknown as UserModel);
+  const [Loading, setLoading] = useState(true);
+  const [userInfo, setUserInfo] = useState<User>();
 
-  const getUserInfo = () => {
-    if (cookies.user) {
-      setUserInfo(JSON.parse(cookies.user));
-    } else {
-      setUserInfo([] as unknown as UserModel);
+  const getUser = async (id: any) => {
+    const getUser = await fetch(`/api/user/${id}`);
+    const result = await getUser.json();
+    if (result.status == true) {
+      setUserInfo(result.user);
+      setLoading(false);
     }
-  }
+  };
+
+
+  useEffect(() => {
+    let cuser = cookies?.user;
+    if (cuser) {
+      let luser = JSON.parse(cuser);
+      getUser(luser._id);
+    } else {
+      setLoading(false);
+    }
+  }, [cookies?.user]);
 
   useEffect(() => {
     setMounted(true);
-    getUserInfo();
   }, [])
 
   console.log('user info', userInfo);
@@ -124,19 +146,19 @@ const Header = () => {
                 {renderThemeMode()}
               </div>
               <div className=" flex flex-col items-center cursor-pointer">
-
-                {
-                  userInfo ?
-                    <Link href={`${baseUrl}/my-account`}>
-                      <FaUser className="text-[24px] text-black dark:text-white" />
-                      <p className="text-black dark:text-white">Account</p>
-                    </Link> :
+                {/* {
+                  userInfo == null ?
                     <Link href={`${baseUrl}/login`}>
                       <FaUser className="text-[24px] text-black dark:text-white" />
                       <p className="text-black dark:text-white">Account</p>
+                    </Link> :
+                    <Link href={`${baseUrl}/my-account`}>
+                      <FaUser className="text-[24px] text-black dark:text-white" />
+                      <p className="text-black dark:text-white">Account</p>
                     </Link>
-                }
+                } */}
 
+                <UserProfileTop />
               </div>
             </div>
           </div>
