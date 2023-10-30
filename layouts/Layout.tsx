@@ -1,5 +1,9 @@
 import React, { ReactNode, useEffect } from "react";
 import Head from "next/head";
+
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 import { baseUrl } from '@/config/appConfig';
 import Header from "@/layouts/Header";
 import Footer from "@/layouts/Footer";
@@ -26,6 +30,7 @@ const Layout = ({ children, title }: Props): JSX.Element => {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="shortcut icon" href={`${baseUrl}/img/favicon.png`} type="image/x-icon" />
       </Head>
+      <ToastContainer />
       <Header />
 
       <div className="full">

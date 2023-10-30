@@ -2,18 +2,59 @@ import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { useTheme } from "next-themes";
 
+import { parseCookies, setCookie, destroyCookie } from "nookies";
 import { baseUrl } from "@/config/appConfig";
 import { FaBars, FaBed, FaCartPlus, FaRegHeart, FaUser, FaUtensils } from "react-icons/fa";
 import { FaMattressPillow } from "react-icons/fa6";
 import { BsFillSunFill, BsMoonStarsFill } from "react-icons/bs";
+import { UserModel } from "@/models";
+import UserProfileTop from "@/components/User/UserProfileTop";
+
+type User = {
+  id: number;
+  firstName: string;
+  lastName: string;
+  email: string;
+  profile_avatar: string;
+  userRole: string;
+};
 
 const Header = () => {
+
+  const cookies = parseCookies();
+  const user = cookies?.user;
+  const token = cookies?.token;
+
   const { systemTheme, theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
+  const [Loading, setLoading] = useState(true);
+  const [userInfo, setUserInfo] = useState<User>();
+
+  const getUser = async (id: any) => {
+    const getUser = await fetch(`/api/user/${id}`);
+    const result = await getUser.json();
+    if (result.status == true) {
+      setUserInfo(result.user);
+      setLoading(false);
+    }
+  };
+
+
+  useEffect(() => {
+    let cuser = cookies?.user;
+    if (cuser) {
+      let luser = JSON.parse(cuser);
+      getUser(luser._id);
+    } else {
+      setLoading(false);
+    }
+  }, [cookies?.user]);
 
   useEffect(() => {
     setMounted(true);
   }, [])
+
+  console.log('user info', userInfo);
 
   const renderThemeMode = () => {
     if (!mounted) return null;
@@ -85,7 +126,7 @@ const Header = () => {
             <div className="flex space-x-3">
               <div className="relative flex flex-col items-center cursor-pointer">
                 <Link href={`${baseUrl}/wishlist`}>
-                  <FaRegHeart className="text-[24px] text-black dark:text-white"/>
+                  <FaRegHeart className="text-[24px] text-black dark:text-white" />
                   <span className="bg-accentOne h-5 w-5 flex items-center justify-center rounded-full absolute -top-2 left-4">
                     8
                   </span>
@@ -94,7 +135,7 @@ const Header = () => {
               </div>
               <div className="relative flex flex-col items-center cursor-pointer">
                 <Link href={`${baseUrl}/cart`}>
-                  <FaCartPlus className="text-[24px] text-black dark:text-white"/>
+                  <FaCartPlus className="text-[24px] text-black dark:text-white" />
                   <span className="bg-accentOne h-5 w-5 flex items-center justify-center rounded-full absolute -top-2 left-4">
                     5
                   </span>
@@ -105,10 +146,19 @@ const Header = () => {
                 {renderThemeMode()}
               </div>
               <div className=" flex flex-col items-center cursor-pointer">
-                <Link href={`${baseUrl}/login`}>
-                  <FaUser className="text-[24px] text-black dark:text-white"/>
-                  <p className="text-black dark:text-white">Account</p>
-                </Link>
+                {/* {
+                  userInfo == null ?
+                    <Link href={`${baseUrl}/login`}>
+                      <FaUser className="text-[24px] text-black dark:text-white" />
+                      <p className="text-black dark:text-white">Account</p>
+                    </Link> :
+                    <Link href={`${baseUrl}/my-account`}>
+                      <FaUser className="text-[24px] text-black dark:text-white" />
+                      <p className="text-black dark:text-white">Account</p>
+                    </Link>
+                } */}
+
+                <UserProfileTop />
               </div>
             </div>
           </div>
@@ -162,7 +212,9 @@ const Header = () => {
                 <Link href={`${baseUrl}/contact-us`}>Contact Us</Link>
               </div>
               <div>
-                <Link href={`${baseUrl}/login`}>Login/Register</Link>
+                {
+                  userInfo ? <> {userInfo.firstName}</> : <Link href={`${baseUrl}/login`}>Login/Register</Link>
+                }
               </div>
             </div>
           </div>
