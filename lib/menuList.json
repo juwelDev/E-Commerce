@@ -8,7 +8,7 @@
       {
         "id": 1,
         "title": "All Products",
-        "url": "pages/dashboard/products"
+        "url": "/products"
       },
       {
         "id": 2,
