@@ -1,9 +1,15 @@
+
+import { ReactNode, useEffect, useState } from "react";
+import Head from "next/head";
+import Link from "next/link";
+import { useRouter } from "next/router";
+import cookie from "js-cookie";
+import { parseCookies, setCookie, destroyCookie } from "nookies";
+
+
 import { baseUrl } from "@/config/appConfig";
 import DashboardHeader from "@/layouts/DashboardHeader";
 import DashboardSidebar from "@/layouts/DashboardSidebar";
-import Head from "next/head";
-import Link from "next/link";
-import { ReactNode, useEffect, useState } from "react";
 
 type Props = {
   children?: ReactNode;
@@ -11,6 +17,10 @@ type Props = {
 };
 
 const DashboardLayout = ({ children, title }: Props): JSX.Element => {
+
+  const router = useRouter();
+  const cookies = parseCookies();
+
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -19,6 +29,10 @@ const DashboardLayout = ({ children, title }: Props): JSX.Element => {
   });
 
   useEffect(() => {
+    if (!cookies.user) {
+      router.push('/')
+    }
+
     setTimeout(() => {
       setLoading(false);
     }, 500);

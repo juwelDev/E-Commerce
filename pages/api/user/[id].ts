@@ -8,8 +8,8 @@ export default async function getUserInfo(req: NextApiRequest, res: NextApiRespo
             await connectbd()
 
             const user_id = req.query.id;
-            const user = await User.findOne({ _id: user_id })
-
+            const user = await User.findOne({ _id: user_id });
+            
             return res.status(200).json({
                 status: true,
                 user: user,
