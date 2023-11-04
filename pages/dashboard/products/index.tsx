@@ -1,5 +1,6 @@
 import Head from "next/head";
 
+import ProductList from "@/components/Dashboard/ProductList";
 import DashboardLayout from "@/layouts/DashboardLayout";
 
 const DashboardPage = () => {
@@ -8,6 +9,7 @@ const DashboardPage = () => {
       <Head>
         <title>Dashboard | E-Commerce</title>
       </Head>
+      <ProductList />
     </DashboardLayout>
   );
 };
