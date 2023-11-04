@@ -7,7 +7,7 @@ const ProductPage = () => {
 
     return (
       <Layout>
-      <main className="p-5">
+      <main className="mt-10 p-5">
         <div className="container mx-auto">
           <div className="grid gap-6 grid-cols-1 lg:grid-cols-5">
             <div className="lg:col-span-3">
