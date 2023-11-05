@@ -1,15 +1,9 @@
-import React, { useEffect, useState } from "react";
-import Link from "next/link";
 import { useTheme } from "next-themes";
+import { useEffect, useState } from "react";
 
-import { parseCookies, setCookie, destroyCookie } from "nookies";
-import { baseUrl } from "@/config/appConfig";
-import { FaBars, FaBed, FaCartPlus, FaRegHeart, FaUser, FaUtensils } from "react-icons/fa";
-import { FaMattressPillow } from "react-icons/fa6";
-import { BsFillSunFill, BsMoonStarsFill } from "react-icons/bs";
-import { UserModel } from "@/models";
-import UserProfileTop from "@/components/User/UserProfileTop";
 import AdminProfileTop from "@/components/User/AdminProfileTop";
+import { parseCookies } from "nookies";
+import { BsFillSunFill, BsMoonStarsFill } from "react-icons/bs";
 
 type User = {
   id: number;
@@ -20,10 +14,7 @@ type User = {
   userRole: string;
 };
 
-
 const DashboardHeader = () => {
-
-
   const cookies = parseCookies();
   const user = cookies?.user;
   const token = cookies?.token;
@@ -42,7 +33,6 @@ const DashboardHeader = () => {
     }
   };
 
-
   useEffect(() => {
     let cuser = cookies?.user;
     if (cuser) {
@@ -55,9 +45,9 @@ const DashboardHeader = () => {
 
   useEffect(() => {
     setMounted(true);
-  }, [])
+  }, []);
 
-  console.log('user info', userInfo);
+  console.log("user info", userInfo);
 
   const renderThemeMode = () => {
     if (!mounted) return null;
@@ -68,7 +58,7 @@ const DashboardHeader = () => {
       return (
         <button className="w-8 h-8 focus:outline-none flex items-center">
           <BsFillSunFill
-            className="ml-1 w-6 h-6 text-yellow-400  dark:text-gray-900"
+            className="ml-1 w-6 h-6 text-yellow-400  dark:text-white"
             role="button"
             onClick={() => setTheme("light")}
           />
@@ -87,9 +77,8 @@ const DashboardHeader = () => {
     }
   };
 
-
   return (
-    <header className="sticky top-0 z-999 flex w-full bg-white drop-shadow-1 dark:bg-boxdark dark:drop-shadow-none">
+    <header className="sticky top-0 z-999 flex w-full bg-white drop-shadow-1 dark:bg-gray-800 dark:drop-shadow-none">
       <div className="flex flex-grow items-center justify-between py-4 px-4 shadow-2 md:px-6 2xl:px-11">
         <div className="flex items-center gap-2 sm:gap-4 lg:hidden">
           {/* Hamburger Toggle BTN */}
@@ -140,16 +129,14 @@ const DashboardHeader = () => {
               <input
                 type="text"
                 placeholder="Type to search..."
-                className="w-full bg-transparent pr-4 pl-9 focus:outline-none"
+                className="w-full bg-transparent dark:bg-transparent pr-4 pl-9 focus:outline-none"
               />
             </div>
           </form>
         </div>
         <div className="flex items-center gap-3 2xsm:gap-7">
           <ul className="flex items-center gap-2 2xsm:gap-4">
-            <li>
-              {renderThemeMode()}
-            </li>
+            <li>{renderThemeMode()}</li>
             <li className="relative">
               <a
                 className="relative flex h-8.5 w-8.5 items-center justify-center rounded-full border-[0.5px] border-stroke bg-gray hover:text-primary dark:border-strokedark dark:bg-meta-4 dark:text-gray"
@@ -174,7 +161,9 @@ const DashboardHeader = () => {
               </a>
             </li>
           </ul>
-          <div className="relative"><AdminProfileTop /></div>
+          <div className="relative">
+            <AdminProfileTop />
+          </div>
         </div>
       </div>
     </header>
