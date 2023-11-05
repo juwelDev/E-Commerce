@@ -12,13 +12,13 @@ const DashboardSidebar = () => {
   console.log("MenuList", MenuList);
 
   return (
-    <aside className="absolute left-0 top-0 z-9999 flex h-screen w-72.5 flex-col overflow-y-hidden bg-white  ease-linear dark:bg-gray-800 lg:static lg:translate-x-0">
+    <aside className="absolute left-0 top-0 z-9999 flex h-screen w-72.5 flex-col overflow-y-hidden  ease-linear bg-gray-800 lg:static lg:translate-x-0">
       {/* SIDEBAR HEADER */}
       <div className="flex items-center justify-between gap-2 px-6 py-5.5 lg:py-6.5">
         <Link href={`${baseUrl}/dashboard`}>
           <img
             src={`${baseUrl}/img/logo/logo.svg`}
-            className="bg-gray-200 dark:bg-gray-800"
+            className=" dark:bg-gray-800"
             alt="Logo"
           />
         </Link>
@@ -48,7 +48,7 @@ const DashboardSidebar = () => {
               {/* Menu Item Dashboard */}
               <li>
                 <Link
-                  className="group relative flex items-center gap-2.5 rounded-sm py-2 px-4 font-medium text-bodydark1  ease-in-out hover:bg-graydark dark:hover:bg-meta-4"
+                  className="group relative flex items-center gap-2.5 rounded-sm py-2 px-4 font-medium text-bodydark1 text-white ease-in-out hover:bg-graydark "
                   href={`${baseUrl}/dashboard`}
                 >
                   <RxDashboard className="text-[19px]" />
@@ -57,7 +57,7 @@ const DashboardSidebar = () => {
               </li>
               {/* Menu Item Dashboard */}
               {MenuList.map((item: any, index: number) => (
-                <li>
+                <li className="text-white">
                   <MenuItem key={index} item={item} />
                 </li>
               ))}
