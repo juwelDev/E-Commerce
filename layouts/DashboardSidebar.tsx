@@ -1,27 +1,26 @@
-import React from "react";
 import Link from "next/link";
 
 import { baseUrl } from "@/config/appConfig";
 
-
 import MenuItem from "@/components/Menu/MenuItem";
 
-import { FaBars, FaBed, FaUtensils } from "react-icons/fa";
-import { FaMattressPillow } from "react-icons/fa6";
 import { RxDashboard } from "react-icons/rx";
 
 import MenuList from "@/lib/menuList.json";
 
 const DashboardSidebar = () => {
-
-  console.log('MenuList', MenuList);
+  console.log("MenuList", MenuList);
 
   return (
-    <aside className="absolute left-0 top-0 z-9999 flex h-screen w-72.5 flex-col overflow-y-hidden bg-black duration-300 ease-linear dark:bg-boxdark lg:static lg:translate-x-0">
+    <aside className="absolute left-0 top-0 z-9999 flex h-screen w-72.5 flex-col overflow-y-hidden  ease-linear bg-gray-800 lg:static lg:translate-x-0">
       {/* SIDEBAR HEADER */}
       <div className="flex items-center justify-between gap-2 px-6 py-5.5 lg:py-6.5">
         <Link href={`${baseUrl}/dashboard`}>
-          <img src={`${baseUrl}/img/logo/logo.svg`} alt="Logo" />
+          <img
+            src={`${baseUrl}/img/logo/logo.svg`}
+            className=" dark:bg-gray-800"
+            alt="Logo"
+          />
         </Link>
         <button className="block lg:hidden">
           <svg
@@ -40,7 +39,7 @@ const DashboardSidebar = () => {
         </button>
       </div>
       {/* SIDEBAR HEADER */}
-      <div className="no-scrollbar flex flex-col overflow-y-auto duration-300 ease-linear">
+      <div className="no-scrollbar flex flex-col overflow-y-auto ease-linear">
         {/* Sidebar Menu */}
         <nav className="mt-5 py-4 px-4 lg:mt-9 lg:px-6">
           {/* Menu Group */}
@@ -49,7 +48,7 @@ const DashboardSidebar = () => {
               {/* Menu Item Dashboard */}
               <li>
                 <Link
-                  className="group relative flex items-center gap-2.5 rounded-sm py-2 px-4 font-medium text-bodydark1 duration-300 ease-in-out hover:bg-graydark dark:hover:bg-meta-4"
+                  className="group relative flex items-center gap-2.5 rounded-sm py-2 px-4 font-medium text-bodydark1 text-white ease-in-out hover:bg-graydark "
                   href={`${baseUrl}/dashboard`}
                 >
                   <RxDashboard className="text-[19px]" />
@@ -57,13 +56,11 @@ const DashboardSidebar = () => {
                 </Link>
               </li>
               {/* Menu Item Dashboard */}
-              {
-                MenuList.map((item: any, index: number) => (
-                  <li>
-                    <MenuItem key={index} item={item} />
-                  </li>
-                ))
-              }
+              {MenuList.map((item: any, index: number) => (
+                <li className="text-white">
+                  <MenuItem key={index} item={item} />
+                </li>
+              ))}
             </ul>
           </div>
         </nav>

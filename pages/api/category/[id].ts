@@ -1,18 +1,18 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import { connectbd } from "@/lib/dbConnect"
-import { User, UserModel } from "@/models/index";
+import { Category } from "@/models/index"
 
-export default async function getUserInfo(req: NextApiRequest, res: NextApiResponse) {
+export default async function getPosts(req: NextApiRequest, res: NextApiResponse) {
     if (req.method === "GET") {
         try {
             await connectbd()
 
-            const user_id = req.query.id;
-            const user = await User.findOne({ _id: user_id });
-            
+            const id = req.query.id;
+            const category = await Category.findOne({ _id: id })
+
             return res.status(200).json({
                 status: true,
-                user: user,
+                category: category,
             })
 
         } catch (err) {

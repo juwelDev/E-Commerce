@@ -1,7 +1,7 @@
 import mongoose, { Document, model, Model, Schema } from "mongoose";
 
 let date = new Date();
-let date_at = date.toLocaleDateString('en-us', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', hour12: true });
+let date_at = Date.now();
 
 export interface UserModel extends Document {
     firstName: string,

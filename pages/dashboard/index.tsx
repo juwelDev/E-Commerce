@@ -1,10 +1,10 @@
-import React from "react";
-import Head from 'next/head'
-import { baseUrl } from "@/config/appConfig";
+import Head from "next/head";
 
-import DashboardLayout from "@/layouts/DashboardLayout"
-
-
+import FullReport from "@/components/Dashboard/FullReport";
+import TotalUser from "@/components/Dashboard/TotalUser";
+import TotalProfit from "@/components/Dashboard/TotallProfit";
+import Traffic from "@/components/Dashboard/Traffic";
+import DashboardLayout from "@/layouts/DashboardLayout";
 
 const DashboardPage = () => {
   return (
@@ -12,9 +12,14 @@ const DashboardPage = () => {
       <Head>
         <title>Dashboard | E-Commerce</title>
       </Head>
-
+      <div className="w-full bg-gray-50 dark:bg-gray-900 flex  justify-between p-4">
+        <TotalUser />
+        <FullReport />
+        <TotalProfit />
+        <Traffic />
+      </div>
     </DashboardLayout>
   );
-}
+};
 
 export default DashboardPage;
