@@ -1,15 +1,26 @@
+import React from "react";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 import { baseUrl } from "@/config/appConfig";
 
 import MenuItem from "@/components/Menu/MenuItem";
-
+import MenuList from "@/lib/menuList.json";
 import { RxDashboard } from "react-icons/rx";
 
-import MenuList from "@/lib/menuList.json";
-
 const DashboardSidebar = () => {
-  console.log("MenuList", MenuList);
+  // console.log("MenuList", MenuList);
+
+  const router = useRouter();
+  const  currentPath  = router.asPath;
+
+  const pro = '/dashboard/products';
+  const add = '/dashboard/products/add-product';
+  const cat = '/dashboard/products/category';
+  const ord = '/dashboard/orders';
+  const usr = '/dashboard/users';
+  const aus = '/dashboard/users/add-users';
+
 
   return (
     <aside className="absolute left-0 top-0 z-9999 flex h-screen w-72.5 flex-col overflow-y-hidden  ease-linear bg-gray-800 lg:static lg:translate-x-0">
@@ -48,7 +59,7 @@ const DashboardSidebar = () => {
               {/* Menu Item Dashboard */}
               <li>
                 <Link
-                  className="group relative flex items-center gap-2.5 rounded-sm py-2 px-4 font-medium text-bodydark1 text-white ease-in-out hover:bg-graydark "
+                  className={`${currentPath == '/dashboard' ? 'bg-[#2E3A47]' : ''} group relative flex items-center gap-2.5 rounded-sm py-2 px-4 font-medium  text-white ease-in-out hover:bg-[#2E3A47] `}
                   href={`${baseUrl}/dashboard`}
                 >
                   <RxDashboard className="text-[19px]" />
@@ -58,7 +69,7 @@ const DashboardSidebar = () => {
               {/* Menu Item Dashboard */}
               {MenuList.map((item: any, index: number) => (
                 <li className="text-white">
-                  <MenuItem key={index} item={item} />
+                  <MenuItem key={index} item={item} currentPath={currentPath.search(item.url)} />
                 </li>
               ))}
             </ul>

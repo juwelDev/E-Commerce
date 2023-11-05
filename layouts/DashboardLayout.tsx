@@ -16,7 +16,7 @@ const DashboardLayout = ({ children, title }: Props): JSX.Element => {
   const router = useRouter();
   const cookies = parseCookies();
 
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     document.body.classList.add("text-bodydark");
@@ -24,13 +24,13 @@ const DashboardLayout = ({ children, title }: Props): JSX.Element => {
   });
 
   useEffect(() => {
-    if (!cookies.user) {
-      router.push("/");
-    }
+    // if (!cookies.user) {
+    //   router.push("/");
+    // }
 
-    setTimeout(() => {
-      setLoading(false);
-    }, 500);
+    // setTimeout(() => {
+    //   setLoading(false);
+    // }, 500);
   }, []);
 
   return (
@@ -54,7 +54,7 @@ const DashboardLayout = ({ children, title }: Props): JSX.Element => {
           <DashboardSidebar />
           <div className="relative flex flex-1 flex-col overflow-y-auto overflow-x-hidden">
             <DashboardHeader />
-            <main>{children}</main>
+            <main className="w-full h-screen bg-gray-50 dark:bg-gray-900">{children}</main>
           </div>
         </div>
       )}

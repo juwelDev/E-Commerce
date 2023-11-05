@@ -1,7 +1,6 @@
 const ProductList = () => {
   return (
     <>
-      <main className=" dark:bg-gray-900">
         {/* Start block */}
         <section className="bg-gray-50 dark:bg-gray-900 p-3 sm:p-5 antialiased  mb-10">
           <div className="mx-auto max-w-screen-2xl px-4 lg:px-12">
@@ -3571,7 +3570,6 @@ const ProductList = () => {
             </div>
           </div>
         </div>
-      </main>
     </>
   );
 };
