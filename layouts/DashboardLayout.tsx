@@ -1,11 +1,7 @@
-
-import { ReactNode, useEffect, useState } from "react";
 import Head from "next/head";
-import Link from "next/link";
 import { useRouter } from "next/router";
-import cookie from "js-cookie";
-import { parseCookies, setCookie, destroyCookie } from "nookies";
-
+import { parseCookies } from "nookies";
+import { ReactNode, useEffect, useState } from "react";
 
 import { baseUrl } from "@/config/appConfig";
 import DashboardHeader from "@/layouts/DashboardHeader";
@@ -17,7 +13,6 @@ type Props = {
 };
 
 const DashboardLayout = ({ children, title }: Props): JSX.Element => {
-
   const router = useRouter();
   const cookies = parseCookies();
 
@@ -30,7 +25,7 @@ const DashboardLayout = ({ children, title }: Props): JSX.Element => {
 
   useEffect(() => {
     if (!cookies.user) {
-      router.push('/')
+      router.push("/");
     }
 
     setTimeout(() => {
@@ -51,7 +46,7 @@ const DashboardLayout = ({ children, title }: Props): JSX.Element => {
       </Head>
 
       {loading ? (
-        <div className="fixed left-0 top-0 z-999999 flex h-screen w-screen items-center justify-center bg-white">
+        <div className="fixed left-0 top-0 z-999999 flex h-screen w-screen items-center justify-center bg-white ">
           <div className="h-16 w-16 animate-spin rounded-full border-4 border-solid border-primary border-t-transparent"></div>
         </div>
       ) : (
@@ -60,7 +55,6 @@ const DashboardLayout = ({ children, title }: Props): JSX.Element => {
           <div className="relative flex flex-1 flex-col overflow-y-auto overflow-x-hidden">
             <DashboardHeader />
             <main>{children}</main>
-            <Link href="pages/dashboard/products/products.tsx"></Link>
           </div>
         </div>
       )}

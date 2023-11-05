@@ -1,19 +1,17 @@
 import Head from "next/head";
 
-import ProductAdd from "@/components/Dashboard/ProductAdd";
+import Orderlists from "@/components/Dashboard/Orderlists";
 import DashboardLayout from "@/layouts/DashboardLayout";
 
-const AddProduct = () => {
+const DashboardPage = () => {
   return (
     <DashboardLayout>
       <Head>
         <title>Dashboard | E-Commerce</title>
       </Head>
-      <div className="w-full">
-        <ProductAdd />
-      </div>
+      <Orderlists />
     </DashboardLayout>
   );
 };
 
-export default AddProduct;
+export default DashboardPage;
