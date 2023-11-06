@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { parseCookies, setCookie, destroyCookie } from "nookies";
 
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -14,17 +15,30 @@ import InputNumber from "@/components/Inputs/InputNumber";
 import InputTextarea from "@/components/Inputs/InputTextarea";
 import { FaTrash } from "react-icons/fa";
 
+type User = {
+  _id: string;
+  firstName: string;
+  lastName: string;
+  email: string;
+  profile_avatar: string;
+  userRole: string;
+};
+
 const ProductAdd = () => {
 
   const router = useRouter();
+  const cookies = parseCookies();
+
   const [loading, setLoading] = useState(true);
   const [loadingImg, setLoadingImg] = useState(false);
   const [conLoading, setConLoading] = useState(false);
+  const [user, setUser] = useState<User>();
 
   const [categories, setCategories] = useState([] as any);
   const [images, setImages] = useState([] as any);
 
   const [newProduct, setNewProduct] = useState({
+    user_id: user?._id,
     title: "",
     images: [],
     category: "",
@@ -38,6 +52,26 @@ const ProductAdd = () => {
     category: "",
     price: "",
   });
+
+  const getUser = async (id: any) => {
+    const getUser = await fetch(`/api/user/${id}`);
+    const result = await getUser.json();
+    if (result.status == true) {
+      setUser(result.user);
+      setNewProduct({ ...newProduct, user_id: result.user?._id });
+      setLoading(false);
+    }
+  };
+
+  useEffect(() => {
+    let cuser = cookies?.user;
+    if (cuser) {
+      let luser = JSON.parse(cuser);
+      getUser(luser._id);
+    } else {
+      setLoading(false);
+    }
+  }, [cookies?.user]);
 
   const getCats = async () => {
     const getCats = await fetch(`${baseUrl}/api/category/get-categories`, {
@@ -181,7 +215,7 @@ const ProductAdd = () => {
         setTimeout(() => {
           router.push("/dashboard/products");
         }, 2500);
-        
+
       } else {
         toast.error(result.error);
       }

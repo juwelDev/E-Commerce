@@ -15,7 +15,7 @@ import { useRouter } from "next/router";
 import { BsFillPersonFill } from "react-icons/bs";
 
 type User = {
-    id: number;
+    _id: string;
     firstName: string;
     lastName: string;
     email: string;

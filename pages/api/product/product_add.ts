@@ -10,7 +10,7 @@ export default async function contactUpdate(req: NextApiRequest, res: NextApiRes
             await connectbd()
 
             const body: ProductModel = JSON.parse(req.body)
-            const { title, images, category, description, price } = body;
+            const { user_id, title, images, category, description, price } = body;
 
             let slug = title;
             slug = slug.toLowerCase().replace(/[^\w-]+/g, '-');
@@ -32,6 +32,7 @@ export default async function contactUpdate(req: NextApiRequest, res: NextApiRes
             }
 
             const newPro = await new Product({
+                user_id: user_id,
                 title: title,
                 slug: newSlug,
                 images: images,

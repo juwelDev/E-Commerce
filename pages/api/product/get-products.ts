@@ -6,11 +6,11 @@ export default async function getProducts(req: NextApiRequest, res: NextApiRespo
     if (req.method === "GET") {
         try {
             await connectbd();
-            const product:any = await Product.find();
+            const products:any = await Product.find();
 
             return res.status(200).json({
                 status: true,
-                product,
+                products,
             })
 
         } catch (err) {

@@ -2,6 +2,10 @@ import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { useTheme } from "next-themes";
 
+import { useDispatch, useSelector } from "react-redux";
+import { setCartList } from '@/lib/reduxStore/slices/storeSlice';
+
+
 import { parseCookies, setCookie, destroyCookie } from "nookies";
 import { baseUrl } from "@/config/appConfig";
 import { FaBars, FaBed, FaCartPlus, FaRegHeart, FaUser, FaUtensils } from "react-icons/fa";
@@ -24,6 +28,9 @@ const Header = () => {
   const cookies = parseCookies();
   const user = cookies?.user;
   const token = cookies?.token;
+
+  const dispatch = useDispatch();
+  const cartCount = useSelector((state: any) => state.utils.cartList.count);
 
   const { systemTheme, theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
@@ -52,6 +59,7 @@ const Header = () => {
 
   useEffect(() => {
     setMounted(true);
+    dispatch(setCartList());
   }, [])
 
   console.log('user info', userInfo);
@@ -137,7 +145,7 @@ const Header = () => {
                 <Link href={`${baseUrl}/cart`}>
                   <FaCartPlus className="text-[24px] text-black dark:text-white" />
                   <span className="bg-accentOne h-5 w-5 flex items-center justify-center rounded-full absolute -top-2 left-4">
-                    5
+                    {cartCount}
                   </span>
                   <p className="text-black dark:text-white">Cart</p>
                 </Link>
