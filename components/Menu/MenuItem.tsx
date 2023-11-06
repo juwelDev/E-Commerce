@@ -1,5 +1,6 @@
-import Link from "next/link";
 import React from "react";
+import Link from "next/link";
+import { useRouter } from "next/router";
 
 import { baseUrl } from "@/config/appConfig";
 import { BsBasket, BsBoxSeam } from "react-icons/bs";
@@ -7,17 +8,20 @@ import { FaUsers } from "react-icons/fa6";
 
 interface MenuProps {
   item?: any;
+  currentPath?: any;
 }
 
 const MenuItem = (props: MenuProps) => {
-  const { item } = props;
+
+  const { item, currentPath } = props;
   const [open, setOpen] = React.useState(false);
+  console.log('currentPath', currentPath);
 
   return (
     <>
       <Link
         href="#"
-        className="group relative flex items-center gap-2.5 rounded-sm py-2 px-4 font-medium text-bodydark1 duration-300 ease-in-out hover:bg-graydark dark:hover:bg-meta-4"
+        className={`${currentPath > 0 ? 'bg-[#2E3A47]' : ''} group relative flex items-center gap-2.5 rounded-sm py-2 px-4 font-medium text-[#DEE4EE] duration-300 ease-in-out hover:bg-[#333A48] dark:hover:bg-[#313D4A]`}
       >
         {item.icon == "BsBoxSeam" ? (
           <BsBoxSeam className="text-[19px]" />
@@ -27,9 +31,8 @@ const MenuItem = (props: MenuProps) => {
         {item.title}
         {item.sub.length > 0 ? (
           <svg
-            className={`absolute right-4 top-1/2 -translate-y-1/2 fill-current duration-300 ease-in-out ${
-              open ? "rotate-180" : ""
-            }`}
+            className={`absolute right-4 top-1/2 -translate-y-1/2 fill-current duration-300 ease-in-out ${open ? "rotate-180" : ""
+              }`}
             width={20}
             height={20}
             viewBox="0 0 20 20"
@@ -53,7 +56,7 @@ const MenuItem = (props: MenuProps) => {
             {item.sub.map((sub_item: any, index: number) => (
               <li key={index}>
                 <Link
-                  className="group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-white"
+                  className="group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-[#8A99AF] duration-300 ease-in-out hover:text-white"
                   href={`${baseUrl}/dashboard/${sub_item.url}`}
                 >
                   {sub_item?.title}

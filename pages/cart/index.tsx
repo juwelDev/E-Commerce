@@ -1,7 +1,27 @@
+import React from "react";
 import { baseUrl } from "@/config/appConfig";
+import { useDispatch, useSelector } from "react-redux";
+import { setCartList, setCartDelete, setNewQuantity } from '@/lib/reduxStore/slices/storeSlice';
 import Layout from "@/layouts/Layout";
+import Link from "next/link";
+
 
 const CartItemPage = () => {
+
+  const dispatch = useDispatch();
+  const cartCount = useSelector((state: any) => state.utils.cartList.count);
+  const cartList = useSelector((state: any) => state.utils.cartList.list);
+
+  console.log('cartList', cartList)
+
+  const removeCart = (id: any) => {
+    dispatch(setCartDelete(id));
+  }
+
+  const quantityUpdate = (product_id: any, quantity: any, price: any) => {
+    dispatch(setNewQuantity({ product_id, quantity, price }));
+  }
+
   return (
     <Layout>
       <div className="p-5">
@@ -11,45 +31,47 @@ const CartItemPage = () => {
             <div>
               <div>
                 <div>
-                  <div className="w-full flex flex-col sm:flex-row items-center gap-4">
-                    <a
-                      href="/src/product.html"
-                      className="w-36 h-32 flex items-center justify-center overflow-hidden"
-                    >
-                      <img
-                        src={`${baseUrl}/img/product/product-1.jpg`}
-                        alt=""
-                        className="object-cover"
-                      />
-                    </a>
-                    <div className="flex-1 flex flex-col justify-between">
-                      <div className="flex justify-between mb-3">
-                        <h3>
-                          Logitech G502 HERO High Performance Wired Gaming
-                          Mouse, HERO 25K Sensor, 25,600 DPI, RGB, Adjustable
-                          Weights, 11
-                        </h3>
-                        <span className="text-lg font-semibold">
-                          $<span>100</span>
-                        </span>
-                      </div>
-                      <div className="flex justify-between items-center">
-                        <div className="flex items-center">
-                          Qty:
-                          <input
-                            type="number"
-                            className="ml-3 py-1 border-gray-200 focus:border-purple-600 focus:ring-purple-600 w-16"
-                          />
-                        </div>
-                        <a
-                          href="#"
-                          className="text-purple-600 hover:text-purple-500"
+                  {
+                    cartList.map((item: any, index: number) => (
+                      <div key={index} className="w-full flex flex-col sm:flex-row items-center gap-4">
+                        <Link
+                          href={`${baseUrl}/product/${item?.product_slug}`}
+                          className="w-36 h-32 flex items-center justify-center overflow-hidden"
                         >
-                          Remove
-                        </a>
-                      </div>
-                    </div>
-                  </div>
+                          <img
+                            src={`${baseUrl}/${item?.product_images[0]?.image}`}
+                            alt=""
+                            className="object-cover"
+                          />
+                        </Link>
+                        <div className="flex-1 flex flex-col justify-between">
+                          <div className="flex justify-between mb-3">
+                            <h3 className="text-lg text-black">{item?.product_title}</h3>
+                            <span className="text-lg font-semibold text-black">
+                              $<span>{item?.total_price}</span>
+                            </span>
+                          </div>
+                          <div className="flex justify-between items-center">
+                            <div className="flex items-center text-black">
+                              Qty:
+                              <input
+                                type="number"
+                                onChange={(e) => quantityUpdate(item?.product_id, e.target.value, item?.product_price)}
+                                className="ml-3 py-1 border-gray-200 focus:border-purple-600 focus:ring-purple-600 w-16"
+                                value={item?.quantity}
+                              />
+                            </div>
+                            <button
+                              onClick={() => removeCart(item?.product_id)}
+                              className="text-purple-600 hover:text-purple-500"
+                            >
+                              Remove
+                            </button>
+                          </div>
+                        </div>
+                      </div>))
+                  }
+
                   {/*/ Product Item */}
                   <hr className="my-5" />
                 </div>

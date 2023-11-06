@@ -14,6 +14,11 @@
         "id": 2,
         "title": "Add Product",
         "url": "/products/add-product"
+      },
+      {
+        "id": 22,
+        "title": "Categories",
+        "url": "/products/category"
       }
     ]
   },

@@ -12,7 +12,7 @@ const DashboardPage = () => {
       <Head>
         <title>Dashboard | E-Commerce</title>
       </Head>
-      <div className="w-full bg-gray-50 dark:bg-gray-900 flex  justify-between p-4">
+      <div className="w-full flex justify-between p-4">
         <TotalUser />
         <FullReport />
         <TotalProfit />
