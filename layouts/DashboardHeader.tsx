@@ -1,9 +1,13 @@
+import React, { useEffect, useState } from "react";
+import { useRouter } from "next/router";
+import Link from "next/link";
 import { useTheme } from "next-themes";
-import { useEffect, useState } from "react";
 
+import { baseUrl } from "@/config/appConfig";
 import AdminProfileTop from "@/components/User/AdminProfileTop";
 import { parseCookies } from "nookies";
 import { BsFillSunFill, BsMoonStarsFill } from "react-icons/bs";
+import { FiMenu } from "react-icons/fi";
 
 type User = {
   id: number;
@@ -14,7 +18,15 @@ type User = {
   userRole: string;
 };
 
-const DashboardHeader = () => {
+interface HeaderProps {
+  sidebarShow?: any;
+  setSidebarShow?: any;
+}
+
+const DashboardHeader = (props: HeaderProps) => {
+
+  const { sidebarShow, setSidebarShow } = props;
+
   const cookies = parseCookies();
   const user = cookies?.user;
   const token = cookies?.token;
@@ -82,23 +94,16 @@ const DashboardHeader = () => {
       <div className="flex flex-grow items-center justify-between py-4 px-4 shadow-2 md:px-6 2xl:px-11">
         <div className="flex items-center gap-2 sm:gap-4 lg:hidden">
           {/* Hamburger Toggle BTN */}
-          <button className="z-99999 block rounded-sm border border-stroke bg-white p-1.5 shadow-sm dark:border-strokedark dark:bg-boxdark lg:hidden">
-            <span className="relative block h-5.5 w-5.5 cursor-pointer">
-              <span className="du-block absolute right-0 h-full w-full">
-                <span className="relative top-0 left-0 my-1 block h-0.5 w-0 rounded-sm bg-black delay-[0] duration-200 ease-in-out dark:bg-white" />
-                <span className="relative top-0 left-0 my-1 block h-0.5 w-0 rounded-sm bg-black delay-150 duration-200 ease-in-out dark:bg-white" />
-                <span className="relative top-0 left-0 my-1 block h-0.5 w-0 rounded-sm bg-black delay-200 duration-200 ease-in-out dark:bg-white" />
-              </span>
-              <span className="du-block absolute right-0 h-full w-full rotate-45">
-                <span className="absolute left-2.5 top-0 block h-full w-0.5 rounded-sm bg-black delay-300 duration-200 ease-in-out dark:bg-white" />
-                <span className="delay-400 absolute left-0 top-2.5 block h-0.5 w-full rounded-sm bg-black duration-200 ease-in-out dark:bg-white" />
-              </span>
-            </span>
+          <button className="z-99999 block rounded-sm border border-stroke bg-white p-1.5 shadow-sm dark:border-strokedark dark:bg-boxdark lg:hidden" onClick={() => setSidebarShow(!sidebarShow)}>
+            <FiMenu className="relative block text-2xl text-gray-900 cursor-pointer" />
           </button>
-          {/* Hamburger Toggle BTN */}
-          <a className="block flex-shrink-0 lg:hidden" href="index.html">
-            <img src="./images/logo/logo-icon.svg" alt="Logo" />
-          </a>
+          <Link href={`${baseUrl}/dashboard`}>
+            <img
+              src={`${baseUrl}/img/logo/logo.svg`}
+              className=" dark:bg-gray-800"
+              alt="Logo"
+            />
+          </Link>
         </div>
         <div className="hidden sm:block">
           <form action="https://formbold.com/s/unique_form_id" method="POST">

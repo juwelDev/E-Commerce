@@ -17,21 +17,12 @@ const DashboardLayout = ({ children, title }: Props): JSX.Element => {
   const cookies = parseCookies();
 
   const [loading, setLoading] = useState(false);
+  const [sidebarShow, setSidebarShow] = useState(true);
 
   useEffect(() => {
-    document.body.classList.add("text-bodydark");
-    document.body.classList.add("bg-boxdark-2");
+    document.body.classList.add("text-[#AEB7C0]");
+    document.body.classList.add("bg-[#1A222C]");
   });
-
-  useEffect(() => {
-    // if (!cookies.user) {
-    //   router.push("/");
-    // }
-
-    // setTimeout(() => {
-    //   setLoading(false);
-    // }, 500);
-  }, []);
 
   return (
     <>
@@ -51,9 +42,9 @@ const DashboardLayout = ({ children, title }: Props): JSX.Element => {
         </div>
       ) : (
         <div className="flex h-screen overflow-hidden">
-          <DashboardSidebar />
+          <DashboardSidebar sidebarShow={sidebarShow} setSidebarShow={setSidebarShow} />
           <div className="relative flex flex-1 flex-col overflow-y-auto overflow-x-hidden">
-            <DashboardHeader />
+            <DashboardHeader sidebarShow={sidebarShow} setSidebarShow={setSidebarShow} />
             <main className="w-full h-screen bg-gray-50 dark:bg-gray-900">{children}</main>
           </div>
         </div>
