@@ -58,9 +58,9 @@ const ProductCard = (props: CartProps) => {
                     </div>
                     {/* Product Price */}
 
-                    {/* Product Rating*/}
+                    {/* Product Rating */}
                     {/* <div className="flex items-center space-x-3 pl-3 pb-3">
-                        <span className="flex">
+                        <span className="flex"> 
                             <i className="fa-solid fa-star text-accentOne" />
                             <i className="fa-solid fa-star text-accentOne" />
                             <i className="fa-solid fa-star text-accentOne" />
@@ -70,7 +70,7 @@ const ProductCard = (props: CartProps) => {
                         <div>
                             <p className="text-paragraph">(150)</p>
                         </div>
-                    </div> */}
+                    </div>  */}
                     {/* Product Rating*/}
                     <div className="w-full mt-5">
                         <button

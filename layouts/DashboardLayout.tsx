@@ -31,7 +31,7 @@ const DashboardLayout = ({ children, title }: Props): JSX.Element => {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link
           rel="shortcut icon"
-          href={`${baseUrl}/img/favicon.png`}
+          href={`${baseUrl}/img/favicon1.ico`}
           type="image/x-icon"
         />
       </Head>

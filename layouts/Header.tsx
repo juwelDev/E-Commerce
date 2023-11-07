@@ -8,9 +8,10 @@ import { setCartList } from '@/lib/reduxStore/slices/storeSlice';
 
 import { parseCookies, setCookie, destroyCookie } from "nookies";
 import { baseUrl } from "@/config/appConfig";
-import { FaBars, FaBed, FaCartPlus, FaRegHeart, FaUser, FaUtensils } from "react-icons/fa";
+import { FaProductHunt, FaTshirt, FaCartPlus, FaRegHeart, FaUser, FaUtensils } from "react-icons/fa";
 import { FaMattressPillow } from "react-icons/fa6";
 import { BsFillSunFill, BsMoonStarsFill } from "react-icons/bs";
+import { GiMonclerJacket, GiArmoredPants, GiShoebillStork} from "react-icons/gi";
 import { UserModel } from "@/models";
 import UserProfileTop from "@/components/User/UserProfileTop";
 
@@ -102,9 +103,9 @@ const Header = () => {
             <div>
               <Link href="/">
                 <img
-                  src={`${baseUrl}/img/logo/logo.png`}
+                  src={`${baseUrl}/img/logo/weblogo.png`}
                   alt="website-logo"
-                  className="w-24"
+                  className="w-24 h-10"
                 />
               </Link>
             </div>
@@ -118,7 +119,7 @@ const Header = () => {
                 />
                 <form>
                   <input
-                    type="text"
+                    type="text dark:text-white"
                     placeholder="search"
                     className="py-2  focus:outline-0 focus:ring-0 border-0"
                   />
@@ -181,34 +182,40 @@ const Header = () => {
             {/* Col 1 */}
             <div className="relative group">
               <div className="bg-accentOne">
-                <Link href="#" className="flex items-center space-x-2 px-5 py-3">
+                <a href="#" className="flex items-center space-x-2 px-5 py-3">
                   <span>
                     <i className="fa-solid fa-bars text-white" />
-                    <FaBars className="text-white" />
+                    <FaProductHunt className="text-white"/>
                   </span>
-                  <span>All Categories</span>
-                </Link>
+                  <span>Product's</span>
+                </a>
               </div>
               {/* Dropdown Menu */}
               <div className="text-primary absolute bg-white w-full shadow-md divide-y divide-dashed divide-separatorColor opacity-0 invisible group-hover:opacity-100 group-hover:visible transition duration-500">
-                <Link href="#" className="flex items-center space-x-2 px-5 py-3">
+                <a href="#" className="flex items-center space-x-2 px-5 py-3 hover:bg-accentOne ">
                   <span>
-                    <FaBed className="text-accentOne" />
+                  <GiMonclerJacket />
                   </span>
-                  <span>Bedroom</span>
-                </Link>
-                <Link href="#" className="flex items-center space-x-2 px-5 py-3">
+                  <span>Jackets</span>
+                </a>
+                <a href="#" className="flex items-center space-x-2 px-5 py-3 hover:bg-accentOne  ">
                   <span>
-                    <FaMattressPillow className="text-accentOne" />
+                  <FaTshirt/>
                   </span>
-                  <span>Mattress</span>
-                </Link>
-                <Link href="#" className="flex items-center space-x-2 px-5 py-3">
+                  <span>T-Shirts</span>
+                </a>
+                <a href="#" className="flex items-center space-x-2 px-5 py-3 hover:bg-accentOne">
                   <span>
-                    <FaUtensils className="text-accentOne" />
+                  <GiArmoredPants/>
                   </span>
-                  <span>Dinning</span>
-                </Link>
+                  <span>Pants</span>
+                </a>
+                <a href="#" className="flex items-center space-x-2 px-5 py-3 hover:bg-accentOne">
+                  <span>
+                  <GiShoebillStork/>
+                  </span>
+                  <span>Shoes</span>
+                </a>
               </div>
             </div>
             {/* Col 2 */}
@@ -216,8 +223,8 @@ const Header = () => {
               <div className="space-x-5">
                 <Link href={`${baseUrl}/`}>Home</Link>
                 <Link href={`${baseUrl}/shop`}>Shop</Link>
-                <Link href={`${baseUrl}/about-us`}>About Us</Link>
-                <Link href={`${baseUrl}/contact-us`}>Contact Us</Link>
+                <Link href={`${baseUrl}/about`}>About Us</Link>
+                <Link href={`${baseUrl}/contact`}>Contact Us</Link>
               </div>
               <div>
                 {

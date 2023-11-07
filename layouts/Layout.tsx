@@ -28,7 +28,7 @@ const Layout = ({ children, title }: Props): JSX.Element => {
       <Head>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="shortcut icon" href={`${baseUrl}/img/favicon.png`} type="image/x-icon" />
+        <link rel="shortcut icon" href={`${baseUrl}/img/favicon1.ico`} type="image/x-icon" />
       </Head>
       <ToastContainer />
       <Header />

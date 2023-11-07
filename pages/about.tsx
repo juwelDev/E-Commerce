@@ -1,10 +1,9 @@
 import Head from "next/head";
+import About from "@/components/About/about";
 
-import Breadcrumb from "@/components/Shop/Breadcrumb";
-import Product from "@/components/Shop/Product";
 import Layout from "@/layouts/Layout";
 
-const Shop = () => {
+const AboutPage = () => {
   return (
     <Layout>
       <Head>
@@ -12,12 +11,12 @@ const Shop = () => {
       </Head>
 
       {/* Main Start */}
-      <Breadcrumb />
-      <Product />
+      
+      < About/>
 
       {/*  Main End  */}
     </Layout>
   );
 };
 
-export default Shop;
+export default AboutPage;

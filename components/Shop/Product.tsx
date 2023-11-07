@@ -25,7 +25,7 @@ const Product = () => {
                         id="bedroom"
                         // defaultChecked=""
                       />
-                      <label htmlFor="bedroom">Bedroom</label>
+                      <label htmlFor="bedroom">Jacket</label>
                     </form>
                   </div>
                   <div>
@@ -40,7 +40,7 @@ const Product = () => {
                         className="border border-paragraph rounded-none h-4 w-4 text-accentOne focus:ring-0"
                         id="sofa"
                       />
-                      <label htmlFor="sofa">Sofa</label>
+                      <label htmlFor="sofa">Pant</label>
                     </form>
                   </div>
                   <div>
@@ -55,7 +55,7 @@ const Product = () => {
                         className="border border-paragraph rounded-none h-4 w-4 text-accentOne focus:ring-0"
                         id="outdoor"
                       />
-                      <label htmlFor="outdoor">Outdoor</label>
+                      <label htmlFor="outdoor">T-Shirt</label>
                     </form>
                   </div>
                   <div>
@@ -70,7 +70,7 @@ const Product = () => {
                         className="border border-paragraph rounded-none h-4 w-4 text-accentOne focus:ring-0"
                         id="office"
                       />
-                      <label htmlFor="office">Office</label>
+                      <label htmlFor="office">Shoes</label>
                     </form>
                   </div>
                   <div>
@@ -91,7 +91,7 @@ const Product = () => {
                         className="border border-paragraph rounded-none h-4 w-4 text-accentOne focus:ring-0"
                         // defaultChecked=""
                       />
-                      <label htmlFor="women">Hatil</label>
+                      <label htmlFor="women">Nike</label>
                     </form>
                   </div>
                 </div>
@@ -102,7 +102,7 @@ const Product = () => {
                         type="checkbox"
                         className="border border-paragraph rounded-none h-4 w-4 text-accentOne focus:ring-0"
                       />
-                      <label htmlFor="women">Brothers</label>
+                      <label htmlFor="women">Zara</label>
                     </form>
                   </div>
                 </div>
@@ -113,7 +113,7 @@ const Product = () => {
                         type="checkbox"
                         className="border border-paragraph rounded-none h-4 w-4 text-accentOne focus:ring-0"
                       />
-                      <label htmlFor="women">Navana</label>
+                      <label htmlFor="women">Puma</label>
                     </form>
                   </div>
                 </div>
@@ -124,7 +124,7 @@ const Product = () => {
                         type="checkbox"
                         className="border border-paragraph rounded-none h-4 w-4 text-accentOne focus:ring-0"
                       />
-                      <label htmlFor="women">Partex</label>
+                      <label htmlFor="women">Calvin Klein</label>
                     </form>
                   </div>
                 </div>
@@ -309,7 +309,7 @@ const Product = () => {
                   {/* product image */}
                   <div className="relative overflow-hidden cursor-pointer">
                     <img
-                      src={`${baseUrl}/img/product/product-1.jpg`}
+                      src={`${baseUrl}/img/collection/jacket-2.jpg`}
                       alt=""
                       className="w-full"
                     />
@@ -331,7 +331,7 @@ const Product = () => {
                   {/* Product description */}
                   <div>
                     <h3 className="pl-3 pt-3 text-primary font-bold text-lg">
-                      Wooden Chair
+                      Jacket
                     </h3>
                     {/* Product Price */}
                     <div className="flex items-center space-x-3 pl-3">
@@ -370,7 +370,7 @@ const Product = () => {
                   {/* product image */}
                   <div className="relative overflow-hidden cursor-pointer">
                     <img
-                      src={`${baseUrl}/img/product/product-2.jpg`}
+                      src={`${baseUrl}/img/collection/pant-3.jpg`}
                       alt=""
                       className="w-full"
                     />
@@ -392,12 +392,12 @@ const Product = () => {
                   {/* Product description */}
                   <div>
                     <h3 className="pl-3 pt-3 text-primary font-bold text-lg">
-                      Wooden Chair
+                      Pant
                     </h3>
                     {/* Product Price */}
                     <div className="flex items-center space-x-3 pl-3">
                       <h4 className="text-paragraph font-medium text-lg">
-                        $45.00
+                        $40.00
                       </h4>
                       <h4 className="line-through text-paragraph font-normal text-sm">
                         $55.00
@@ -431,7 +431,7 @@ const Product = () => {
                   {/* product image */}
                   <div className="relative overflow-hidden cursor-pointer">
                     <img
-                      src={`${baseUrl}/img/product/product-3.jpg`}
+                      src={`${baseUrl}/img/collection/tshirt-3.jpg`}
                       alt=""
                       className="w-full"
                     />
@@ -453,15 +453,15 @@ const Product = () => {
                   {/* Product description */}
                   <div>
                     <h3 className="pl-3 pt-3 text-primary font-bold text-lg">
-                      Wooden Chair
+                     T-Shirt
                     </h3>
                     {/* Product Price */}
                     <div className="flex items-center space-x-3 pl-3">
                       <h4 className="text-paragraph font-medium text-lg">
-                        $45.00
+                        $35.00
                       </h4>
                       <h4 className="line-through text-paragraph font-normal text-sm">
-                        $55.00
+                        $50.00
                       </h4>
                     </div>
                     {/* Product Rating*/}
@@ -492,7 +492,7 @@ const Product = () => {
                   {/* product image */}
                   <div className="relative overflow-hidden cursor-pointer">
                     <img
-                      src={`${baseUrl}/img/product/product-4.jpg`}
+                      src={`${baseUrl}/img/collection/shoes-lofa.jpg`}
                       alt=""
                       className="w-full"
                     />
@@ -514,7 +514,7 @@ const Product = () => {
                   {/* Product description */}
                   <div>
                     <h3 className="pl-3 pt-3 text-primary font-bold text-lg">
-                      Wooden Chair
+                      Shoes
                     </h3>
                     {/* Product Price */}
                     <div className="flex items-center space-x-3 pl-3">
@@ -553,7 +553,7 @@ const Product = () => {
                   {/* product image */}
                   <div className="relative overflow-hidden cursor-pointer">
                     <img
-                      src={`${baseUrl}/img/product/product-5.jpg`}
+                      src={`${baseUrl}/img/collection/sunglass-2.jpg`}
                       alt=""
                       className="w-full"
                     />
@@ -575,15 +575,15 @@ const Product = () => {
                   {/* Product description */}
                   <div>
                     <h3 className="pl-3 pt-3 text-primary font-bold text-lg">
-                      Wooden Chair
+                      Sunglasses
                     </h3>
                     {/* Product Price */}
                     <div className="flex items-center space-x-3 pl-3">
                       <h4 className="text-paragraph font-medium text-lg">
-                        $45.00
+                        $35.00
                       </h4>
                       <h4 className="line-through text-paragraph font-normal text-sm">
-                        $55.00
+                        $45.00
                       </h4>
                     </div>
                     {/* Product Rating*/}
@@ -614,7 +614,7 @@ const Product = () => {
                   {/* product image */}
                   <div className="relative overflow-hidden cursor-pointer">
                     <img
-                      src={`${baseUrl}/img/product/product-6.jpg`}
+                      src={`${baseUrl}/img/collection/watch-1.jpg`}
                       alt=""
                       className="w-full"
                     />
@@ -636,15 +636,15 @@ const Product = () => {
                   {/* Product description */}
                   <div>
                     <h3 className="pl-3 pt-3 text-primary font-bold text-lg">
-                      Wooden Chair
+                      Watch
                     </h3>
                     {/* Product Price */}
                     <div className="flex items-center space-x-3 pl-3">
                       <h4 className="text-paragraph font-medium text-lg">
-                        $45.00
+                        $25.00
                       </h4>
                       <h4 className="line-through text-paragraph font-normal text-sm">
-                        $55.00
+                        $35.00
                       </h4>
                     </div>
                     {/* Product Rating*/}
@@ -675,7 +675,7 @@ const Product = () => {
                   {/* product image */}
                   <div className="relative overflow-hidden cursor-pointer">
                     <img
-                      src={`${baseUrl}/img/product/product-7.jpg`}
+                      src={`${baseUrl}/img/collection/smart-watch.jpg`}
                       alt=""
                       className="w-full"
                     />
@@ -697,15 +697,15 @@ const Product = () => {
                   {/* Product description */}
                   <div>
                     <h3 className="pl-3 pt-3 text-primary font-bold text-lg">
-                      Wooden Chair
+                      Smart Watch
                     </h3>
                     {/* Product Price */}
                     <div className="flex items-center space-x-3 pl-3">
                       <h4 className="text-paragraph font-medium text-lg">
-                        $45.00
+                        $35.00
                       </h4>
                       <h4 className="line-through text-paragraph font-normal text-sm">
-                        $55.00
+                        $45.00
                       </h4>
                     </div>
                     {/* Product Rating*/}
@@ -736,7 +736,7 @@ const Product = () => {
                   {/* product image */}
                   <div className="relative overflow-hidden cursor-pointer">
                     <img
-                      src={`${baseUrl}/img/product/product-8.jpg`}
+                      src={`${baseUrl}/img/collection/tshirt-2.jpg`}
                       alt=""
                       className="w-full"
                     />
@@ -758,15 +758,15 @@ const Product = () => {
                   {/* Product description */}
                   <div>
                     <h3 className="pl-3 pt-3 text-primary font-bold text-lg">
-                      Wooden Chair
+                      T-Shirt
                     </h3>
                     {/* Product Price */}
                     <div className="flex items-center space-x-3 pl-3">
                       <h4 className="text-paragraph font-medium text-lg">
-                        $45.00
+                        $25.00
                       </h4>
                       <h4 className="line-through text-paragraph font-normal text-sm">
-                        $55.00
+                        $30.00
                       </h4>
                     </div>
                     {/* Product Rating*/}
@@ -797,7 +797,7 @@ const Product = () => {
                   {/* product image */}
                   <div className="relative overflow-hidden cursor-pointer">
                     <img
-                      src={`${baseUrl}/img/product/product-9.jpg`}
+                      src={`${baseUrl}/img/collection/jacket-5.jpg`}
                       alt=""
                       className="w-full"
                     />
@@ -819,7 +819,7 @@ const Product = () => {
                   {/* Product description */}
                   <div>
                     <h3 className="pl-3 pt-3 text-primary font-bold text-lg">
-                      Wooden Chair
+                      Jacket
                     </h3>
                     {/* Product Price */}
                     <div className="flex items-center space-x-3 pl-3">
