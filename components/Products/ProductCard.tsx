@@ -21,7 +21,7 @@ const ProductCard = (props: CartProps) => {
     }
 
     return (
-        <div className="w-full h-[410px] flex items-center justify-content-center">
+        <div className="w-full h-[410px] flex items-center justify-content-center bg-indigo-300 ">
             <div className="w-full h-[410px]">
                 {/* product image */}
                 <Link
@@ -47,9 +47,9 @@ const ProductCard = (props: CartProps) => {
                 {/* product image */}
 
                 {/* Product description */}
-                <div className="w-full">
+                <div className="w-full ">
                     <Link href={`${baseUrl}/product/${product?.slug}`}>
-                        <h3 className="pl-3 pt-3 text-primary font-bold text-lg">{product?.title}</h3>
+                        <h3 className="pl-3 pt-3 text-gray-900 font-bold text-lg">{product?.title}</h3>
                     </Link>
 
                     {/* Product Price */}
@@ -72,10 +72,10 @@ const ProductCard = (props: CartProps) => {
                         </div>
                     </div>  */}
                     {/* Product Rating*/}
-                    <div className="w-full mt-5">
+                    <div className="w-full pl-3 pr-3 pt-2">
                         <button
                             onClick={() => addCart(product)}
-                            className="w-full h-13 bottom-0 text-primary border border-accentOne block py-1 font-medium hover:bg-gradient-to-r from-accentOne to-accentTwo hover:text-white transition duration-150"
+                            className="w-full  h-13 rounded-lg bottom-0 text-gray-900 border-2 border-primary block py-1 font-medium hover:bg-accentOne hover:text-white "
                         >
                             Add to Cart
                         </button>

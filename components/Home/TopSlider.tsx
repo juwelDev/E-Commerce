@@ -1,4 +1,8 @@
+
+import React from "react";
 import { baseUrl } from "@/config/appConfig";
+import Link from "next/link";
+
 
 const TopSlider = () => {
   return (
@@ -20,7 +24,7 @@ const TopSlider = () => {
                                 href="#"
                                 className="text-white rounded-md px-6 py-2 font-medium bg-gradient-to-r from-accentOne to-primary hover:from-primary hover:to-accentOne"
                             >
-                                Shop Now
+                               <Link href={`${baseUrl}/shop`}>Shop Now</Link>
                             </a>
                         </div>
                     </div>

@@ -1,5 +1,6 @@
 import React from "react";
 import { baseUrl } from '@/config/appConfig';
+import Link from "next/link";
 
 const Offers = () => {
     return (
@@ -19,7 +20,7 @@ const Offers = () => {
                                 href="#"
                                 className="text-white rounded-md px-6 py-2 font-medium bg-gradient-to-r from-accentOne to-accentTwo hover:from-accentTwo hover:to-accentOne"
                             >
-                                Shop Now
+                                <Link href={`${baseUrl}/shop`}>Shop Now</Link>
                             </a>
                         </div>
                     </div>
@@ -42,7 +43,7 @@ const Offers = () => {
                                 href="#"
                                 className="text-white rounded-md px-6 py-2 font-medium bg-gradient-to-r from-accentOne to-accentTwo hover:from-accentTwo hover:to-accentOne"
                             >
-                                Shop Now
+                                <Link href={`${baseUrl}/shop`}>Shop Now</Link>
                             </a>
                         </div>
                     </div>

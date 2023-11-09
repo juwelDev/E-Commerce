@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { useTheme } from "next-themes";
-
+import { useRouter } from "next/router";
 import { useDispatch, useSelector } from "react-redux";
 import { setCartList } from '@/lib/reduxStore/slices/storeSlice';
 
@@ -38,6 +38,8 @@ const Header = () => {
   const [Loading, setLoading] = useState(true);
   const [userInfo, setUserInfo] = useState<User>();
 
+
+const router = useRouter();
   const getUser = async (id: any) => {
     const getUser = await fetch(`/api/user/${id}`);
     const result = await getUser.json();
@@ -219,16 +221,40 @@ const Header = () => {
               </div>
             </div>
             {/* Col 2 */}
-            <div className="flex justify-between flex-grow">
+            <div className="flex justify-between flex-grow ">
               <div className="space-x-5">
-                <Link href={`${baseUrl}/`}>Home</Link>
-                <Link href={`${baseUrl}/shop`}>Shop</Link>
-                <Link href={`${baseUrl}/about`}>About Us</Link>
-                <Link href={`${baseUrl}/contact`}>Contact Us</Link>
+                <span className={
+                    router.pathname == "/"
+                      ? "bg-accentOne p-3.5"
+                      : "hover:bg-accentOne p-3.5"
+                  }>
+                  <Link href={`${baseUrl}/`}>Home</Link>
+                </span>
+                <span className={
+                    router.pathname == "/shop"
+                      ? "bg-accentOne p-3.5"
+                      : "hover:bg-accentOne p-3.5"
+                  }>
+                  <Link href={`${baseUrl}/shop`}>Shop</Link>
+                </span>
+                <span className={
+                    router.pathname == "/about"
+                      ? "bg-accentOne p-3.5"
+                      : "hover:bg-accentOne p-3.5"
+                  }>
+                  <Link href={`${baseUrl}/about`}>About Us</Link>
+                </span>
+                <span className={
+                    router.pathname == "/contact"
+                      ? "bg-accentOne p-3.5"
+                      : "hover:bg-accentOne p-3.5"
+                  }>
+                  <Link href={`${baseUrl}/contact`}>Contact Us</Link>
+                </span>
               </div>
               <div>
                 {
-                  userInfo ? <> {userInfo.firstName}</> : <Link href={`${baseUrl}/login`}>Login/Register</Link>
+                  userInfo ? <> {userInfo.firstName}</> : <Link href={`${baseUrl}/login`} className=" p-3.5 font-medium hover:bg-accentOne to-accentTwo">Login/Register</Link>
                 }
               </div>
             </div>
