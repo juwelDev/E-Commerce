@@ -25,7 +25,9 @@ const Offers = () => {
                     </div>
                     {/* Inner Col 2 */}
                     <div className="basis-1/2 group-hover:scale-105 transition duration-500">
-                        <img src="images/product/sofa1.png" alt="" />
+                        <picture>
+                            <img src="images/product/sofa1.png" alt="" />
+                        </picture>
                     </div>
                 </div>
                 {/* Col 2 */}
@@ -48,7 +50,9 @@ const Offers = () => {
                     </div>
                     {/* Inner Col 2 */}
                     <div className="basis-1/2 group-hover:scale-105 transition duration-500">
-                        <img src="images/product/sofa2.png" alt="" />
+                        <picture>
+                            <img src="images/product/sofa2.png" alt="" />
+                        </picture>
                     </div>
                 </div>
             </div>

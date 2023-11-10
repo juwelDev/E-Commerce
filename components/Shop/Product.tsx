@@ -23,7 +23,7 @@ const Product = () => {
                         type="checkbox"
                         className="border border-paragraph rounded-none h-4 w-4 text-accentOne bg focus:ring-0"
                         id="bedroom"
-                        // defaultChecked=""
+                      // defaultChecked=""
                       />
                       <label htmlFor="bedroom">Bedroom</label>
                     </form>
@@ -89,7 +89,7 @@ const Product = () => {
                       <input
                         type="checkbox"
                         className="border border-paragraph rounded-none h-4 w-4 text-accentOne focus:ring-0"
-                        // defaultChecked=""
+                      // defaultChecked=""
                       />
                       <label htmlFor="women">Hatil</label>
                     </form>
@@ -308,11 +308,12 @@ const Product = () => {
                 <div className="col border border-separate group">
                   {/* product image */}
                   <div className="relative overflow-hidden cursor-pointer">
-                    <img
-                      src={`${baseUrl}/img/product/product-1.jpg`}
-                      alt=""
-                      className="w-full"
-                    />
+                    <picture>
+                      <img
+                        src={`${baseUrl}/img/product/product-1.jpg`}
+                        alt=""
+                        className="w-full"
+                      /></picture>
                     <div className="absolute inset-0 flex items-center justify-center space-x-1 bg-black/20 opacity-0 group-hover:opacity-100 transition">
                       <a
                         href="#"
@@ -369,11 +370,12 @@ const Product = () => {
                 <div className="col border border-separate group">
                   {/* product image */}
                   <div className="relative overflow-hidden cursor-pointer">
-                    <img
-                      src={`${baseUrl}/img/product/product-2.jpg`}
-                      alt=""
-                      className="w-full"
-                    />
+                    <picture>
+                      <img
+                        src={`${baseUrl}/img/product/product-2.jpg`}
+                        alt=""
+                        className="w-full"
+                      /></picture>
                     <div className="absolute inset-0 flex items-center justify-center space-x-1 bg-black/20 opacity-0 group-hover:opacity-100 transition">
                       <a
                         href="#"
@@ -430,11 +432,12 @@ const Product = () => {
                 <div className="col border border-separate group">
                   {/* product image */}
                   <div className="relative overflow-hidden cursor-pointer">
-                    <img
-                      src={`${baseUrl}/img/product/product-3.jpg`}
-                      alt=""
-                      className="w-full"
-                    />
+                    <picture>
+                      <img
+                        src={`${baseUrl}/img/product/product-3.jpg`}
+                        alt=""
+                        className="w-full"
+                      /></picture>
                     <div className="absolute inset-0 flex items-center justify-center space-x-1 bg-black/20 opacity-0 group-hover:opacity-100 transition">
                       <a
                         href="#"
@@ -491,11 +494,12 @@ const Product = () => {
                 <div className="col border border-separate group">
                   {/* product image */}
                   <div className="relative overflow-hidden cursor-pointer">
-                    <img
-                      src={`${baseUrl}/img/product/product-4.jpg`}
-                      alt=""
-                      className="w-full"
-                    />
+                    <picture>
+                      <img
+                        src={`${baseUrl}/img/product/product-4.jpg`}
+                        alt=""
+                        className="w-full"
+                      /></picture>
                     <div className="absolute inset-0 flex items-center justify-center space-x-1 bg-black/20 opacity-0 group-hover:opacity-100 transition">
                       <a
                         href="#"
@@ -552,11 +556,12 @@ const Product = () => {
                 <div className="col border border-separate group">
                   {/* product image */}
                   <div className="relative overflow-hidden cursor-pointer">
-                    <img
-                      src={`${baseUrl}/img/product/product-5.jpg`}
-                      alt=""
-                      className="w-full"
-                    />
+                    <picture>
+                      <img
+                        src={`${baseUrl}/img/product/product-5.jpg`}
+                        alt=""
+                        className="w-full"
+                      /></picture>
                     <div className="absolute inset-0 flex items-center justify-center space-x-1 bg-black/20 opacity-0 group-hover:opacity-100 transition">
                       <a
                         href="#"
@@ -613,11 +618,12 @@ const Product = () => {
                 <div className="col border border-separate group">
                   {/* product image */}
                   <div className="relative overflow-hidden cursor-pointer">
-                    <img
-                      src={`${baseUrl}/img/product/product-6.jpg`}
-                      alt=""
-                      className="w-full"
-                    />
+                    <picture>
+                      <img
+                        src={`${baseUrl}/img/product/product-6.jpg`}
+                        alt=""
+                        className="w-full"
+                      /></picture>
                     <div className="absolute inset-0 flex items-center justify-center space-x-1 bg-black/20 opacity-0 group-hover:opacity-100 transition">
                       <a
                         href="#"
@@ -674,11 +680,12 @@ const Product = () => {
                 <div className="col border border-separate group">
                   {/* product image */}
                   <div className="relative overflow-hidden cursor-pointer">
-                    <img
-                      src={`${baseUrl}/img/product/product-7.jpg`}
-                      alt=""
-                      className="w-full"
-                    />
+                    <picture>
+                      <img
+                        src={`${baseUrl}/img/product/product-7.jpg`}
+                        alt=""
+                        className="w-full"
+                      /></picture>
                     <div className="absolute inset-0 flex items-center justify-center space-x-1 bg-black/20 opacity-0 group-hover:opacity-100 transition">
                       <a
                         href="#"
@@ -735,11 +742,12 @@ const Product = () => {
                 <div className="col border border-separate group">
                   {/* product image */}
                   <div className="relative overflow-hidden cursor-pointer">
-                    <img
-                      src={`${baseUrl}/img/product/product-8.jpg`}
-                      alt=""
-                      className="w-full"
-                    />
+                    <picture>
+                      <img
+                        src={`${baseUrl}/img/product/product-8.jpg`}
+                        alt=""
+                        className="w-full"
+                      /></picture>
                     <div className="absolute inset-0 flex items-center justify-center space-x-1 bg-black/20 opacity-0 group-hover:opacity-100 transition">
                       <a
                         href="#"
@@ -796,11 +804,12 @@ const Product = () => {
                 <div className="col border border-separate group">
                   {/* product image */}
                   <div className="relative overflow-hidden cursor-pointer">
-                    <img
-                      src={`${baseUrl}/img/product/product-9.jpg`}
-                      alt=""
-                      className="w-full"
-                    />
+                    <picture>
+                      <img
+                        src={`${baseUrl}/img/product/product-9.jpg`}
+                        alt=""
+                        className="w-full"
+                      /></picture>
                     <div className="absolute inset-0 flex items-center justify-center space-x-1 bg-black/20 opacity-0 group-hover:opacity-100 transition">
                       <a
                         href="#"

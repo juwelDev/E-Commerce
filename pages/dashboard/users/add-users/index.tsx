@@ -7,7 +7,7 @@ import AddUser from "@/components/User/AddUser"
 
 
 
-const DashboardPage = () => {
+const AddUserPage = () => {
   return (
     <DashboardLayout>
       <Head>
@@ -18,4 +18,4 @@ const DashboardPage = () => {
   );
 }
 
-export default DashboardPage;
+export default AddUserPage;

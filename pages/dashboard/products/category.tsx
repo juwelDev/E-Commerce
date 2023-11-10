@@ -13,7 +13,7 @@ import { Button, Label, Modal } from 'flowbite-react';
 import { FaImage, FaPlus, FaRegEdit, FaTrash } from "react-icons/fa";
 import InputText from "@/components/Inputs/InputText";
 
-const category = () => {
+const CategoryPage = () => {
 
     const [loading, setLoading] = useState(true);
     const [conLoading, setConLoading] = useState(false);
@@ -584,10 +584,13 @@ const category = () => {
                                                                 className="w-4 h-4 mt-1 ml-14 text-red-600 z-10 absolute cursor-pointer"
                                                                 onClick={() => setNewCategory({ ...newCategory, logo: '' })}
                                                             />
-                                                            <img
-                                                                src={`${newCategory.logo}`}
-                                                                className="w-20 h-24 rounded-lg"
-                                                            />
+                                                            <picture>
+                                                                <img
+                                                                    src={`${newCategory.logo}`}
+                                                                    className="w-20 h-24 rounded-lg"
+                                                                    alt="logo"
+                                                                />
+                                                            </picture>
                                                         </div>
                                                     </>
                                                 )}
@@ -727,10 +730,13 @@ const category = () => {
                                                                 className="w-4 h-4 mt-1 ml-14 text-red-600 z-10 absolute cursor-pointer"
                                                                 onClick={() => setEditCategory({ ...editCategory, logo: '' })}
                                                             />
-                                                            <img
-                                                                src={`${editCategory.logo}`}
-                                                                className="w-20 h-24 rounded-lg"
-                                                            />
+                                                            <picture>
+                                                                <img
+                                                                    src={`${editCategory.logo}`}
+                                                                    className="w-20 h-24 rounded-lg"
+                                                                    alt="logo"
+                                                                />
+                                                            </picture>
                                                         </div>
                                                     </>
                                                 )}
@@ -811,4 +817,4 @@ const category = () => {
     )
 }
 
-export default category
+export default CategoryPage

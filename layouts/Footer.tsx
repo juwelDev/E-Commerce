@@ -13,7 +13,9 @@ const Footer = () => {
             {/* Col 1 */}
             <div className="col space-y-3">
               <div>
-                <img src="images/logo/logo.png" alt="" className="w-24" />
+                <picture>
+                  <img src="images/logo/logo.png" alt="" className="w-24" />
+                </picture>
               </div>
               <p>
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero illo

@@ -1,6 +1,6 @@
 import Layout from "@/layouts/Layout";
 import React from "react";
-const orders = () => {
+const OrdersPage = () => {
   return (
     <Layout>
       <main className="h-screen p-5 bg-slate-300">
@@ -293,4 +293,4 @@ const orders = () => {
 
   )
 }
-export default orders;
+export default OrdersPage;

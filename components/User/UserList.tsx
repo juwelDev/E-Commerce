@@ -80,11 +80,13 @@ const UserList = () => {
                 scope="row"
                 className="flex items-center px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white"
               >
-                <img
-                  className="w-10 h-10 rounded-full"
-                  src={`${baseUrl}/img/user/user-01.png`}
-                  alt=""
-                />
+                <picture>
+                  <img
+                    className="w-10 h-10 rounded-full"
+                    src={`${baseUrl}/img/user/user-01.png`}
+                    alt=""
+                  />
+                </picture>
                 <div className="pl-3">
                   <div className="text-base font-semibold">Neil Sims</div>
                   <div className="font-normal text-gray-500">
@@ -125,11 +127,13 @@ const UserList = () => {
                 scope="row"
                 className="flex items-center px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
               >
-                <img
-                  className="w-10 h-10 rounded-full"
-                  src={`${baseUrl}/img/user/user-03.png`}
-                  alt=""
-                />
+                <picture>
+                  <img
+                    className="w-10 h-10 rounded-full"
+                    src={`${baseUrl}/img/user/user-03.png`}
+                    alt=""
+                  />
+                </picture>
                 <div className="pl-3">
                   <div className="text-base font-semibold">Bonnie Green</div>
                   <div className="font-normal text-gray-500">
@@ -170,11 +174,13 @@ const UserList = () => {
                 scope="row"
                 className="flex items-center px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
               >
-                <img
-                  className="w-10 h-10 rounded-full"
-                  src={`${baseUrl}/img/user/user-05.png`}
-                  alt=""
-                />
+                <picture>
+                  <img
+                    className="w-10 h-10 rounded-full"
+                    src={`${baseUrl}/img/user/user-05.png`}
+                    alt=""
+                  />
+                </picture>
                 <div className="pl-3">
                   <div className="text-base font-semibold">Jese Leos</div>
                   <div className="font-normal text-gray-500">
@@ -215,11 +221,13 @@ const UserList = () => {
                 scope="row"
                 className="flex items-center px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
               >
-                <img
-                  className="w-10 h-10 rounded-full"
-                  src={`${baseUrl}/img/user/user-06.png`}
-                  alt=""
-                />
+                <picture>
+                  <img
+                    className="w-10 h-10 rounded-full"
+                    src={`${baseUrl}/img/user/user-06.png`}
+                    alt=""
+                  />
+                </picture>
                 <div className="pl-3">
                   <div className="text-base font-semibold">Thomas Lean</div>
                   <div className="font-normal text-gray-500">
@@ -260,11 +268,13 @@ const UserList = () => {
                 scope="row"
                 className="flex items-center px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
               >
-                <img
-                  className="w-10 h-10 rounded-full"
-                  src={`${baseUrl}/img/user/user-02.png`}
-                  alt=""
-                />
+                <picture>
+                  <img
+                    className="w-10 h-10 rounded-full"
+                    src={`${baseUrl}/img/user/user-02.png`}
+                    alt=""
+                  />
+                </picture>
                 <div className="pl-3">
                   <div className="text-base font-semibold">
                     Leslie Livingston

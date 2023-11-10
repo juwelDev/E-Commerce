@@ -13,7 +13,7 @@ import Layout from "@/layouts/Layout";
 import InputEmail from "@/components/Inputs/InputEmail";
 import InputPass from "@/components/Inputs/InputPass";
 
-const login = () => {
+const LoginPage = () => {
 
   const router = useRouter();
   const cookies = parseCookies();
@@ -203,4 +203,4 @@ const login = () => {
     </Layout>
   );
 };
-export default login;
+export default LoginPage;

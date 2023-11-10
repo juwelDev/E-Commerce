@@ -11,7 +11,7 @@ import { baseUrl } from "@/config/appConfig";
 import DashboardLayout from "@/layouts/DashboardLayout";
 import { FaRegEdit } from "react-icons/fa";
 
-const DashboardPage = () => {
+const ProductsPage = () => {
 
   const [loading, setLoading] = useState(true);
   const [products, setProducts] = useState([] as any);
@@ -166,7 +166,7 @@ const DashboardPage = () => {
                         </div>
                       </th>
                       <th className="p-4" style={{ width: "70%" }}>
-                      Product Title
+                        Product Title
                       </th>
                       <th className="p-4" style={{ width: "20%" }}>
                         Action
@@ -191,7 +191,7 @@ const DashboardPage = () => {
                             <td className="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                               <div className="flex items-center space-x-4">
                                 <button
-                                  
+
                                   className="py-2 px-3 flex items-center text-sm font-medium text-center text-white bg-primary-700 rounded-lg hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
                                 >
                                   <FaRegEdit className="text-base font-semibold  mr-2 -ml-0.5" />
@@ -335,4 +335,4 @@ const DashboardPage = () => {
   );
 };
 
-export default DashboardPage;
+export default ProductsPage;
