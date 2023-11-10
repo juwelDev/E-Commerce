@@ -98,11 +98,13 @@ const DashboardHeader = (props: HeaderProps) => {
             <FiMenu className="relative block text-2xl text-gray-900 cursor-pointer" />
           </button>
           <Link href={`${baseUrl}/dashboard`}>
-            <img
-              src={`${baseUrl}/img/logo/logo.svg`}
-              className=" dark:bg-gray-800"
-              alt="Logo"
-            />
+            <picture>
+              <img
+                src={`${baseUrl}/img/logo/logo.svg`}
+                className=" dark:bg-gray-800"
+                alt="Logo"
+              />
+            </picture>
           </Link>
         </div>
         <div className="hidden sm:block">

@@ -3,7 +3,7 @@ import Head from 'next/head'
 import { baseUrl } from "@/config/appConfig";
 import Layout from "@/layouts/Layout"
 
-const ProductPage = () => {
+const ProductDetailsPage = () => {
 
     return (
       <Layout>
@@ -149,4 +149,4 @@ const ProductPage = () => {
     );
 };
 
-export default ProductPage;
+export default ProductDetailsPage;

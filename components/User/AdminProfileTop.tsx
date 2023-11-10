@@ -93,7 +93,9 @@ const AdminProfileTop: React.FC = () => {
               </span>
             </span>
             <span className="h-12 w-12 rounded-full">
-              <img src={user.profile_avatar} alt="User" />
+              <picture>
+                            <img  src={user.profile_avatar} alt="User" />
+          </picture>
             </span>
             <svg
               className="hidden fill-current sm:block"

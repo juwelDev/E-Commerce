@@ -303,7 +303,9 @@ const ProductAdd = () => {
                             className="w-4 h-4 mt-1 ml-14 text-red-600 z-10 absolute cursor-pointer"
                             onClick={() => photoDel(item.id)}
                           />
-                          <img src={item.image} className="w-20 h-24 rounded-lg" />
+                          <picture>
+                            <img src={item.image} className="w-20 h-24 rounded-lg" />
+                          </picture>
                         </div>
                       </>
                     )}

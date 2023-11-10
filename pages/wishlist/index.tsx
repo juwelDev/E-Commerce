@@ -5,7 +5,7 @@ import { BsArchiveFill } from "react-icons/bs";
 import { FaAddressCard, FaRegCreditCard, FaTrash } from "react-icons/fa";
 import { MdOutlineLogout } from "react-icons/md";
 
-const WishList = () => {
+const WishListPage = () => {
   return (
     <Layout>
       <div>
@@ -26,11 +26,13 @@ const WishList = () => {
             <div className="col-span-3">
               <div className="px-4 py-3 shadow flex items-center gap-4">
                 <div className="flex-shrink-0">
-                  <img
-                    src={`${baseUrl}/img/avatar.png`}
-                    alt="profile"
-                    className="rounded-full w-14 h-14 border border-gray-200 p-1 object-cover"
-                  />
+                  <picture>
+                    <img
+                      src={`${baseUrl}/img/avatar.png`}
+                      alt="profile"
+                      className="rounded-full w-14 h-14 border border-gray-200 p-1 object-cover"
+                    />
+                  </picture>
                 </div>
                 <div className="flex-grow">
                   <p className="text-gray-600">Hello,</p>
@@ -142,11 +144,13 @@ const WishList = () => {
             <div className="col-span-9 space-y-4">
               <div className="flex items-center justify-between border gap-6 p-4 border-gray-200 rounded">
                 <div className="w-28">
-                  <img
-                    src={`${baseUrl}/img/product/product20.jpg`}
-                    alt="product 20"
-                    className="w-full"
-                  />
+                  <picture>
+                    <img
+                      src={`${baseUrl}/img/product/product20.jpg`}
+                      alt="product 20"
+                      className="w-full"
+                    />
+                  </picture>
                 </div>
                 <div className="w-1/3">
                   <h2 className="text-gray-800 text-xl font-medium uppercase">
@@ -172,11 +176,13 @@ const WishList = () => {
               </div>
               <div className="flex items-center justify-between border gap-6 p-4 border-gray-200 rounded">
                 <div className="w-28">
-                  <img
-                    src={`${baseUrl}/img/product/product21.jpg`}
-                    alt="product 21"
-                    className="w-full"
-                  />
+                  <picture>
+                    <img
+                      src={`${baseUrl}/img/product/product21.jpg`}
+                      alt="product 21"
+                      className="w-full"
+                    />
+                  </picture>
                 </div>
                 <div className="w-1/3">
                   <h2 className="text-gray-800 text-xl font-medium uppercase">
@@ -202,11 +208,13 @@ const WishList = () => {
               </div>
               <div className="flex items-center justify-between border gap-6 p-4 border-gray-200 rounded">
                 <div className="w-28">
-                  <img
-                    src={`${baseUrl}/img/product/product22.jpg`}
-                    alt="product 22"
-                    className="w-full"
-                  />
+                  <picture>
+                    <img
+                      src={`${baseUrl}/img/product/product22.jpg`}
+                      alt="product 22"
+                      className="w-full"
+                    />
+                  </picture>
                 </div>
                 <div className="w-1/3">
                   <h2 className="text-gray-800 text-xl font-medium uppercase">
@@ -242,4 +250,4 @@ const WishList = () => {
   );
 };
 
-export default WishList;
+export default WishListPage;

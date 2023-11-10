@@ -101,21 +101,25 @@ const Header = () => {
             {/* Col 1 */}
             <div>
               <Link href="/">
-                <img
-                  src={`${baseUrl}/img/logo/logo.png`}
-                  alt="website-logo"
-                  className="w-24"
-                />
+                <picture>
+                  <img
+                    src={`${baseUrl}/img/logo/logo.png`}
+                    alt="website-logo"
+                    className="w-24"
+                  />
+                </picture>
               </Link>
             </div>
             {/* Col 2 */}
             <div>
               <div className="flex border border-r-0 rounded-md border-accentOne">
-                <img
-                  src={`${baseUrl}/img/icon/search.svg`}
-                  alt="search"
-                  className="pl-3 pr-4"
-                />
+                <picture>
+                  <img
+                    src={`${baseUrl}/img/icon/search.svg`}
+                    alt="search"
+                    className="pl-3 pr-4"
+                  />
+                </picture>
                 <form>
                   <input
                     type="text"

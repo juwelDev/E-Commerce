@@ -93,11 +93,13 @@ const UserProfileTop: React.FC = () => {
                         className="dropdown-toggle flex items-center rounded-full text-sm focus:bg-none focus:ring-0 dark:focus:ring-0 md:mr-0"
                         onClick={() => handleOpen(1)}
                     >
-                        <img
-                            className="h-7 w-7 text-white rounded-full"
-                            src={user.profile_avatar}
-                            alt="user photo"
-                        />
+                        <picture>
+                            <img
+                                className="h-7 w-7 text-white rounded-full"
+                                src={user.profile_avatar}
+                                alt="user photo"
+                            />
+                        </picture>
                         <span className="ml-2 hidden text-left md:block">
                             <span
                                 className={`${language == "bng" ? `bangla text-xl` : "font-sans text-base"

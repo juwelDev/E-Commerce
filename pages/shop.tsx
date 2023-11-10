@@ -4,7 +4,7 @@ import Breadcrumb from "@/components/Shop/Breadcrumb";
 import Product from "@/components/Shop/Product";
 import Layout from "@/layouts/Layout";
 
-const Shop = () => {
+const ShopPage = () => {
   return (
     <Layout>
       <Head>
@@ -20,4 +20,4 @@ const Shop = () => {
   );
 };
 
-export default Shop;
+export default ShopPage;

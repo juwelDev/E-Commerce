@@ -7,7 +7,7 @@ import UserList from "@/components/User/UserList";
 
 
 
-const DashboardPage = () => {
+const UsersPage = () => {
   return (
     <DashboardLayout>
       <Head>
@@ -18,4 +18,4 @@ const DashboardPage = () => {
   );
 }
 
-export default DashboardPage;
+export default UsersPage;

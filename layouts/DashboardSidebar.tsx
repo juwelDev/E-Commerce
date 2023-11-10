@@ -27,7 +27,7 @@ const DashboardSidebar = (props: SidebarProps) => {
         setSidebarShow(false);
       }
     };
-    
+
     document.addEventListener("mousedown", handler);
     return () => {
       document.removeEventListener("mousedown", handler);
@@ -39,11 +39,13 @@ const DashboardSidebar = (props: SidebarProps) => {
       {/* SIDEBAR HEADER */}
       <div className="flex items-center justify-between gap-2 px-6 py-5.5 lg:py-6.5">
         <Link href={`${baseUrl}/dashboard`}>
-          <img
-            src={`${baseUrl}/img/logo/logo.svg`}
-            className=" dark:bg-gray-800"
-            alt="Logo"
-          />
+          <picture>
+            <img
+              src={`${baseUrl}/img/logo/logo.svg`}
+              className=" dark:bg-gray-800"
+              alt="Logo"
+            />
+          </picture>
         </Link>
         <button className="block lg:hidden" onClick={() => setSidebarShow(!sidebarShow)}>
           <svg
