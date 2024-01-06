@@ -8,7 +8,7 @@ const ShopPage = () => {
   return (
     <Layout>
       <Head>
-        <title>No.1 E-Commerce</title>
+        <title>SStyle</title>
       </Head>
 
       {/* Main Start */}

@@ -8,9 +8,11 @@ import { setCartList } from '@/lib/reduxStore/slices/storeSlice';
 
 import { parseCookies, setCookie, destroyCookie } from "nookies";
 import { baseUrl } from "@/config/appConfig";
-import { FaBars, FaBed, FaCartPlus, FaRegHeart, FaUser, FaUtensils } from "react-icons/fa";
+import { FaBars, FaTshirt, FaCartPlus, FaRegHeart, FaUser, FaUtensils } from "react-icons/fa";
 import { FaMattressPillow } from "react-icons/fa6";
-import { BsFillSunFill, BsMoonStarsFill } from "react-icons/bs";
+import { BsFillSunFill, BsMoonStarsFill,BsSunglasses } from "react-icons/bs";
+import {GiMonclerJacket,GiArmoredPants,GiShoebillStork} from 'react-icons/gi';
+import {IoWatch} from 'react-icons/io5'
 import { UserModel } from "@/models";
 import UserProfileTop from "@/components/User/UserProfileTop";
 
@@ -103,7 +105,7 @@ const Header = () => {
               <Link href="/">
                 <picture>
                   <img
-                    src={`${baseUrl}/img/logo/logo.png`}
+                    src={`${baseUrl}/img/logo/weblogo.png`}
                     alt="website-logo"
                     className="w-24"
                   />
@@ -111,29 +113,47 @@ const Header = () => {
               </Link>
             </div>
             {/* Col 2 */}
-            <div>
-              <div className="flex border border-r-0 rounded-md border-accentOne">
-                <picture>
-                  <img
-                    src={`${baseUrl}/img/icon/search.svg`}
-                    alt="search"
-                    className="pl-3 pr-4"
-                  />
-                </picture>
-                <form>
-                  <input
-                    type="text"
-                    placeholder="search"
-                    className="py-2  focus:outline-0 focus:ring-0 border-0"
-                  />
-                  <input
-                    type="submit"
-                    defaultValue="Search"
-                    className="bg-accentOne text-white rounded-r-md px-3 py-2 cursor-pointer"
-                  />
-                </form>
+            <form>
+              <label
+                htmlFor="default-search"
+                className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white "
+              >
+                Search
+              </label>
+              <div className="relative">
+                <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                  <svg
+                    className="w-4 h-4 text-gray-500 dark:text-gray-400"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      stroke="currentColor"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
+                    />
+                  </svg>
+                </div>
+                <input
+                  type="search"
+                  id="default-search"
+                  className="block w-full p-4 pr-25 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  placeholder="Search"
+                  
+                />
+                <button
+                  type="submit"
+                  className="text-black dark:text-white absolute end-2.5 bottom-2.5 bg-blue-300 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                >
+                  Search
+                </button>
               </div>
-            </div>
+            </form>
+
             {/* Col 3*/}
             <div className="flex space-x-3">
               <div className="relative flex flex-col items-center cursor-pointer">
@@ -179,12 +199,12 @@ const Header = () => {
       {/* End Header */}
 
       {/* Start Navbar */}
-      <nav className="bg-primary text-white">
+      <nav className="bg-accentOne text-white flex sticky top-0 absolute z-10">
         <div className="container">
           <div className="row flex items-center space-x-5">
             {/* Col 1 */}
             <div className="relative group">
-              <div className="bg-accentOne">
+              <div className="bg-primary">
                 <Link href="#" className="flex items-center space-x-2 px-5 py-3">
                   <span>
                     <i className="fa-solid fa-bars text-white" />
@@ -194,40 +214,54 @@ const Header = () => {
                 </Link>
               </div>
               {/* Dropdown Menu */}
-              <div className="text-primary absolute bg-white w-full shadow-md divide-y divide-dashed divide-separatorColor opacity-0 invisible group-hover:opacity-100 group-hover:visible transition duration-500">
-                <Link href="#" className="flex items-center space-x-2 px-5 py-3">
+              <div className="text-white absolute bg-accentOne w-full shadow-md divide-y divide-dashed divide-separatorColor opacity-0 invisible group-hover:opacity-100 group-hover:visible transition duration-500">
+                <span className="flex items-center space-x-2 px-5 py-3 hover:bg-primary ">
                   <span>
-                    <FaBed className="text-accentOne" />
+                  <GiMonclerJacket />
                   </span>
-                  <span>Bedroom</span>
-                </Link>
-                <Link href="#" className="flex items-center space-x-2 px-5 py-3">
+                  <Link href={`${baseUrl}/#`}>Jacket</Link>
+                </span>
+                <span className="flex items-center space-x-2 px-5 py-3 hover:bg-primary  ">
                   <span>
-                    <FaMattressPillow className="text-accentOne" />
+                  <FaTshirt/>
                   </span>
-                  <span>Mattress</span>
-                </Link>
-                <Link href="#" className="flex items-center space-x-2 px-5 py-3">
+                  <Link href={`${baseUrl}/#`}>T'Shirt</Link>
+                </span>
+                <span  className="flex items-center space-x-2 px-5 py-3 hover:bg-primary">
                   <span>
-                    <FaUtensils className="text-accentOne" />
+                  <GiArmoredPants/>
                   </span>
-                  <span>Dinning</span>
-                </Link>
+                  <Link href={`${baseUrl}/#`}>Pant</Link>
+                </span>
+                <span className="flex items-center space-x-2 px-5 py-3 hover:bg-primary">
+                  <span>
+                  <GiShoebillStork/>
+                  </span>
+                  <Link href={`${baseUrl}/#`}>Shoes</Link>
+                </span>
+                <span className="flex items-center space-x-2 px-5 py-3 hover:bg-primary">
+                  <span>
+                  <IoWatch />
+                  </span>
+                  <Link href={`${baseUrl}/#`}>Watch</Link>
+                </span>
+                <span className="flex items-center space-x-2 px-5 py-3 hover:bg-primary">
+                  <span>
+                  <BsSunglasses />
+                  </span>
+                  <Link href={`${baseUrl}/#`}>Sunglasses</Link>
+                </span>
               </div>
             </div>
             {/* Col 2 */}
-            <div className="flex justify-between flex-grow">
-              <div className="space-x-5">
-                <Link href={`${baseUrl}/`}>Home</Link>
-                <Link href={`${baseUrl}/shop`}>Shop</Link>
-                <Link href={`${baseUrl}/about-us`}>About Us</Link>
-                <Link href={`${baseUrl}/contact-us`}>Contact Us</Link>
+            <div className="flex justify-between flex-grow ">
+              <div className="space-x-5 flex">
+                <Link href={`${baseUrl}/`}className=" hover:bg-accentTwo p-3">Home</Link>
+                <Link href={`${baseUrl}/shop`} className=" hover:bg-accentTwo p-3">Shop</Link>
+                <Link href={`${baseUrl}/about`}className=" hover:bg-accentTwo p-3">About Us</Link>
+                {/* <Link href={`${baseUrl}/contact-us`}className=" hover:bg-accentTwo p-3">Contact Us</Link> */}
               </div>
-              <div>
-                {
-                  userInfo ? <> {userInfo.firstName}</> : <Link href={`${baseUrl}/login`}>Login/Register</Link>
-                }
-              </div>
+              
             </div>
           </div>
         </div>

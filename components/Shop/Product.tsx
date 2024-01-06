@@ -1,31 +1,31 @@
 import { baseUrl } from "@/config/appConfig";
 import { AiFillStar } from "react-icons/ai";
 import { BsListUl } from "react-icons/bs";
-import { FaLongArrowAltRight } from "react-icons/fa";
+import { FaLongArrowAltRight,FaRegHeart } from "react-icons/fa";
 import { LuGripHorizontal } from "react-icons/lu";
 const Product = () => {
   return (
     <>
-      <section className="pt-5">
+       <section className="pt-5">
         <div className="container">
-          <div className="row grid grid-cols-4 space-x-5 items-start">
+          <div className="row grid grid-cols-5 space-x-5 items-start">
             {/* Col 1 */}
-            <div className="col-span-1 shadow-md py-5 px-3 space-y-5 divide-y border border-separate">
+            <div className="col-span-1 shadow-md py-5 px-3 space-y-5 divide-y border border-separate bg-green-200 text-black ">
               {/* Category Part */}
               <div className="space-y-3">
                 <h2 className="text-primary font-medium text-xl uppercase">
                   Category
                 </h2>
-                <div className="flex justify-between items-center">
+                <div className="flex justify-between items-center ">
                   <div>
                     <form className="space-x-2">
                       <input
                         type="checkbox"
                         className="border border-paragraph rounded-none h-4 w-4 text-accentOne bg focus:ring-0"
                         id="bedroom"
-                      // defaultChecked=""
+                        // defaultChecked=""
                       />
-                      <label htmlFor="bedroom">Bedroom</label>
+                      <label htmlFor="bedroom">Jacket</label>
                     </form>
                   </div>
                   <div>
@@ -40,7 +40,7 @@ const Product = () => {
                         className="border border-paragraph rounded-none h-4 w-4 text-accentOne focus:ring-0"
                         id="sofa"
                       />
-                      <label htmlFor="sofa">Sofa</label>
+                      <label htmlFor="sofa">Pant</label>
                     </form>
                   </div>
                   <div>
@@ -55,7 +55,7 @@ const Product = () => {
                         className="border border-paragraph rounded-none h-4 w-4 text-accentOne focus:ring-0"
                         id="outdoor"
                       />
-                      <label htmlFor="outdoor">Outdoor</label>
+                      <label htmlFor="outdoor">T-Shirt</label>
                     </form>
                   </div>
                   <div>
@@ -70,7 +70,7 @@ const Product = () => {
                         className="border border-paragraph rounded-none h-4 w-4 text-accentOne focus:ring-0"
                         id="office"
                       />
-                      <label htmlFor="office">Office</label>
+                      <label htmlFor="office">Shoes</label>
                     </form>
                   </div>
                   <div>
@@ -89,9 +89,9 @@ const Product = () => {
                       <input
                         type="checkbox"
                         className="border border-paragraph rounded-none h-4 w-4 text-accentOne focus:ring-0"
-                      // defaultChecked=""
+                        // defaultChecked=""
                       />
-                      <label htmlFor="women">Hatil</label>
+                      <label htmlFor="women">Nike</label>
                     </form>
                   </div>
                 </div>
@@ -102,7 +102,7 @@ const Product = () => {
                         type="checkbox"
                         className="border border-paragraph rounded-none h-4 w-4 text-accentOne focus:ring-0"
                       />
-                      <label htmlFor="women">Brothers</label>
+                      <label htmlFor="women">Zara</label>
                     </form>
                   </div>
                 </div>
@@ -113,7 +113,7 @@ const Product = () => {
                         type="checkbox"
                         className="border border-paragraph rounded-none h-4 w-4 text-accentOne focus:ring-0"
                       />
-                      <label htmlFor="women">Navana</label>
+                      <label htmlFor="women">Puma</label>
                     </form>
                   </div>
                 </div>
@@ -124,7 +124,7 @@ const Product = () => {
                         type="checkbox"
                         className="border border-paragraph rounded-none h-4 w-4 text-accentOne focus:ring-0"
                       />
-                      <label htmlFor="women">Partex</label>
+                      <label htmlFor="women">Calvin Klein</label>
                     </form>
                   </div>
                 </div>
@@ -282,11 +282,11 @@ const Product = () => {
               </div>
             </div>
             {/* Col 2 */}
-            <div className="col-span-3 space-y-5">
+            <div className="col-span-4 space-y-5">
               {/* Row 1 */}
-              <div className="flex justify-between items-center">
+              <div className="flex justify-between items-center text-black">
                 <div>
-                  <select className="w-44 border border-separatorColor px-4 py-3 focus:ring-0 focus:border-accentOne">
+                  <select className="w-44 border border-separatorColor px-4 py-3 focus:ring-0 focus:border-accentOne bg-green-200">
                     <option value="">Default Sorting</option>
                     <option value="">Price low - high</option>
                     <option value="">Price high - low</option>
@@ -297,45 +297,35 @@ const Product = () => {
                     <i className="fa-solid fa-grip" />
                     <LuGripHorizontal />
                   </div>
-                  <div className="rounded-sm py-1 px-3 border border-separate cursor-pointer">
-                    <BsListUl />
-                  </div>
+                 
                 </div>
               </div>
               {/* Row 2 */}
-              <div className="grid grid-cols-3 gap-5">
+              <div className="grid grid-cols-4 gap-5 ">
                 {/* Col 1 */}
-                <div className="col border border-separate group">
+                <div className="col border border-separate group bg-green-200 ">
                   {/* product image */}
                   <div className="relative overflow-hidden cursor-pointer">
-                    <picture>
-                      <img
-                        src={`${baseUrl}/img/product/product-1.jpg`}
-                        alt=""
-                        className="w-full"
-                      /></picture>
+                    <img
+                      src={`${baseUrl}/img/collection/jacket-2.jpg`}
+                      alt=""
+                      className="w-full"
+                    />
                     <div className="absolute inset-0 flex items-center justify-center space-x-1 bg-black/20 opacity-0 group-hover:opacity-100 transition">
-                      <a
-                        href="#"
-                        className="w-8 h-8 rounded-full bg-accentOne p-2 flex items-center justify-center"
-                      >
-                        <i className="fa-solid fa-magnifying-glass" />
-                      </a>
-                      <a
-                        href="#"
-                        className="w-8 h-8 rounded-full bg-accentOne p-2 flex items-center justify-center"
-                      >
-                        <i className="fa-regular fa-heart" />
-                      </a>
+                    <span className="w-10 h-10 rounded-full bg-accentOne p-2 flex items-center justify-center hover:bg-primary">
+                            <FaRegHeart />
+                        </span>
+                        
                     </div>
+                  
                   </div>
                   {/* Product description */}
                   <div>
                     <h3 className="pl-3 pt-3 text-primary font-bold text-lg">
-                      Wooden Chair
+                      Jacket
                     </h3>
                     {/* Product Price */}
-                    <div className="flex items-center space-x-3 pl-3">
+                    <div className="flex items-center space-x-3 pl-3 text-black">
                       <h4 className="text-paragraph font-medium text-lg">
                         $45.00
                       </h4>
@@ -367,15 +357,14 @@ const Product = () => {
                   </div>
                 </div>
                 {/* Col 2 */}
-                <div className="col border border-separate group">
+                <div className="col border border-separate group bg-green-200">
                   {/* product image */}
                   <div className="relative overflow-hidden cursor-pointer">
-                    <picture>
-                      <img
-                        src={`${baseUrl}/img/product/product-2.jpg`}
-                        alt=""
-                        className="w-full"
-                      /></picture>
+                    <img
+                      src={`${baseUrl}/img/collection/pant-3.jpg`}
+                      alt=""
+                      className="w-full"
+                    />
                     <div className="absolute inset-0 flex items-center justify-center space-x-1 bg-black/20 opacity-0 group-hover:opacity-100 transition">
                       <a
                         href="#"
@@ -394,12 +383,12 @@ const Product = () => {
                   {/* Product description */}
                   <div>
                     <h3 className="pl-3 pt-3 text-primary font-bold text-lg">
-                      Wooden Chair
+                      Pant
                     </h3>
                     {/* Product Price */}
-                    <div className="flex items-center space-x-3 pl-3">
+                    <div className="flex items-center space-x-3 pl-3 text-black">
                       <h4 className="text-paragraph font-medium text-lg">
-                        $45.00
+                        $40.00
                       </h4>
                       <h4 className="line-through text-paragraph font-normal text-sm">
                         $55.00
@@ -429,15 +418,14 @@ const Product = () => {
                   </div>
                 </div>
                 {/* Col 3 */}
-                <div className="col border border-separate group">
+                <div className="col border border-separate group bg-green-200">
                   {/* product image */}
                   <div className="relative overflow-hidden cursor-pointer">
-                    <picture>
-                      <img
-                        src={`${baseUrl}/img/product/product-3.jpg`}
-                        alt=""
-                        className="w-full"
-                      /></picture>
+                    <img
+                      src={`${baseUrl}/img/collection/tshirt-3.jpg`}
+                      alt=""
+                      className="w-full"
+                    />
                     <div className="absolute inset-0 flex items-center justify-center space-x-1 bg-black/20 opacity-0 group-hover:opacity-100 transition">
                       <a
                         href="#"
@@ -456,15 +444,15 @@ const Product = () => {
                   {/* Product description */}
                   <div>
                     <h3 className="pl-3 pt-3 text-primary font-bold text-lg">
-                      Wooden Chair
+                     T-Shirt
                     </h3>
                     {/* Product Price */}
-                    <div className="flex items-center space-x-3 pl-3">
+                    <div className="flex items-center space-x-3 pl-3 text-black">
                       <h4 className="text-paragraph font-medium text-lg">
-                        $45.00
+                        $35.00
                       </h4>
                       <h4 className="line-through text-paragraph font-normal text-sm">
-                        $55.00
+                        $50.00
                       </h4>
                     </div>
                     {/* Product Rating*/}
@@ -491,15 +479,14 @@ const Product = () => {
                   </div>
                 </div>
                 {/* Col 4 */}
-                <div className="col border border-separate group">
+                <div className="col border border-separate group bg-green-200">
                   {/* product image */}
                   <div className="relative overflow-hidden cursor-pointer">
-                    <picture>
-                      <img
-                        src={`${baseUrl}/img/product/product-4.jpg`}
-                        alt=""
-                        className="w-full"
-                      /></picture>
+                    <img
+                      src={`${baseUrl}/img/collection/shoes-lofa.jpg`}
+                      alt=""
+                      className="w-full "  
+                    />
                     <div className="absolute inset-0 flex items-center justify-center space-x-1 bg-black/20 opacity-0 group-hover:opacity-100 transition">
                       <a
                         href="#"
@@ -518,10 +505,10 @@ const Product = () => {
                   {/* Product description */}
                   <div>
                     <h3 className="pl-3 pt-3 text-primary font-bold text-lg">
-                      Wooden Chair
+                      Shoes
                     </h3>
                     {/* Product Price */}
-                    <div className="flex items-center space-x-3 pl-3">
+                    <div className="flex items-center space-x-3 pl-3 text-black">
                       <h4 className="text-paragraph font-medium text-lg">
                         $45.00
                       </h4>
@@ -553,15 +540,14 @@ const Product = () => {
                   </div>
                 </div>
                 {/* Col 5 */}
-                <div className="col border border-separate group">
+                <div className="col border border-separate group bg-green-200">
                   {/* product image */}
                   <div className="relative overflow-hidden cursor-pointer">
-                    <picture>
-                      <img
-                        src={`${baseUrl}/img/product/product-5.jpg`}
-                        alt=""
-                        className="w-full"
-                      /></picture>
+                    <img
+                      src={`${baseUrl}/img/collection/sunglass-2.jpg`}
+                      alt=""
+                      className="w-full"
+                    />
                     <div className="absolute inset-0 flex items-center justify-center space-x-1 bg-black/20 opacity-0 group-hover:opacity-100 transition">
                       <a
                         href="#"
@@ -580,15 +566,15 @@ const Product = () => {
                   {/* Product description */}
                   <div>
                     <h3 className="pl-3 pt-3 text-primary font-bold text-lg">
-                      Wooden Chair
+                      Sunglasses
                     </h3>
                     {/* Product Price */}
-                    <div className="flex items-center space-x-3 pl-3">
+                    <div className="flex items-center space-x-3 pl-3 text-black">
                       <h4 className="text-paragraph font-medium text-lg">
-                        $45.00
+                        $35.00
                       </h4>
                       <h4 className="line-through text-paragraph font-normal text-sm">
-                        $55.00
+                        $45.00
                       </h4>
                     </div>
                     {/* Product Rating*/}
@@ -615,15 +601,14 @@ const Product = () => {
                   </div>
                 </div>
                 {/* Col 6 */}
-                <div className="col border border-separate group">
+                <div className="col border border-separate group bg-green-200">
                   {/* product image */}
                   <div className="relative overflow-hidden cursor-pointer">
-                    <picture>
-                      <img
-                        src={`${baseUrl}/img/product/product-6.jpg`}
-                        alt=""
-                        className="w-full"
-                      /></picture>
+                    <img
+                      src={`${baseUrl}/img/collection/watch-1.jpg`}
+                      alt=""
+                      className="w-full"
+                    />
                     <div className="absolute inset-0 flex items-center justify-center space-x-1 bg-black/20 opacity-0 group-hover:opacity-100 transition">
                       <a
                         href="#"
@@ -642,15 +627,15 @@ const Product = () => {
                   {/* Product description */}
                   <div>
                     <h3 className="pl-3 pt-3 text-primary font-bold text-lg">
-                      Wooden Chair
+                      Watch
                     </h3>
                     {/* Product Price */}
-                    <div className="flex items-center space-x-3 pl-3">
+                    <div className="flex items-center space-x-3 pl-3 text-black">
                       <h4 className="text-paragraph font-medium text-lg">
-                        $45.00
+                        $25.00
                       </h4>
                       <h4 className="line-through text-paragraph font-normal text-sm">
-                        $55.00
+                        $35.00
                       </h4>
                     </div>
                     {/* Product Rating*/}
@@ -677,15 +662,14 @@ const Product = () => {
                   </div>
                 </div>
                 {/* Col 7 */}
-                <div className="col border border-separate group">
+                <div className="col border border-separate group bg-green-200">
                   {/* product image */}
                   <div className="relative overflow-hidden cursor-pointer">
-                    <picture>
-                      <img
-                        src={`${baseUrl}/img/product/product-7.jpg`}
-                        alt=""
-                        className="w-full"
-                      /></picture>
+                    <img
+                      src={`${baseUrl}/img/collection/smart-watch.jpg`}
+                      alt=""
+                      className="w-full"
+                    />
                     <div className="absolute inset-0 flex items-center justify-center space-x-1 bg-black/20 opacity-0 group-hover:opacity-100 transition">
                       <a
                         href="#"
@@ -704,15 +688,15 @@ const Product = () => {
                   {/* Product description */}
                   <div>
                     <h3 className="pl-3 pt-3 text-primary font-bold text-lg">
-                      Wooden Chair
+                      Smart Watch
                     </h3>
                     {/* Product Price */}
-                    <div className="flex items-center space-x-3 pl-3">
+                    <div className="flex items-center space-x-3 pl-3 text-black">
                       <h4 className="text-paragraph font-medium text-lg">
-                        $45.00
+                        $35.00
                       </h4>
                       <h4 className="line-through text-paragraph font-normal text-sm">
-                        $55.00
+                        $45.00
                       </h4>
                     </div>
                     {/* Product Rating*/}
@@ -739,15 +723,14 @@ const Product = () => {
                   </div>
                 </div>
                 {/* Col 8 */}
-                <div className="col border border-separate group">
+                <div className="col border border-separate group bg-green-200">
                   {/* product image */}
                   <div className="relative overflow-hidden cursor-pointer">
-                    <picture>
-                      <img
-                        src={`${baseUrl}/img/product/product-8.jpg`}
-                        alt=""
-                        className="w-full"
-                      /></picture>
+                    <img
+                      src={`${baseUrl}/img/collection/tshirt-2.jpg`}
+                      alt=""
+                      className="w-full"
+                    />
                     <div className="absolute inset-0 flex items-center justify-center space-x-1 bg-black/20 opacity-0 group-hover:opacity-100 transition">
                       <a
                         href="#"
@@ -766,15 +749,15 @@ const Product = () => {
                   {/* Product description */}
                   <div>
                     <h3 className="pl-3 pt-3 text-primary font-bold text-lg">
-                      Wooden Chair
+                      T-Shirt
                     </h3>
                     {/* Product Price */}
-                    <div className="flex items-center space-x-3 pl-3">
+                    <div className="flex items-center space-x-3 pl-3 text-black">
                       <h4 className="text-paragraph font-medium text-lg">
-                        $45.00
+                        $25.00
                       </h4>
                       <h4 className="line-through text-paragraph font-normal text-sm">
-                        $55.00
+                        $30.00
                       </h4>
                     </div>
                     {/* Product Rating*/}
@@ -801,15 +784,14 @@ const Product = () => {
                   </div>
                 </div>
                 {/* Col 9 */}
-                <div className="col border border-separate group">
+                <div className="col border border-separate group bg-green-200">
                   {/* product image */}
                   <div className="relative overflow-hidden cursor-pointer">
-                    <picture>
-                      <img
-                        src={`${baseUrl}/img/product/product-9.jpg`}
-                        alt=""
-                        className="w-full"
-                      /></picture>
+                    <img
+                      src={`${baseUrl}/img/collection/jacket-5.jpg`}
+                      alt=""
+                      className="w-full"
+                    />
                     <div className="absolute inset-0 flex items-center justify-center space-x-1 bg-black/20 opacity-0 group-hover:opacity-100 transition">
                       <a
                         href="#"
@@ -828,10 +810,10 @@ const Product = () => {
                   {/* Product description */}
                   <div>
                     <h3 className="pl-3 pt-3 text-primary font-bold text-lg">
-                      Wooden Chair
+                      Jacket
                     </h3>
                     {/* Product Price */}
-                    <div className="flex items-center space-x-3 pl-3">
+                    <div className="flex items-center space-x-3 pl-3 text-black">
                       <h4 className="text-paragraph font-medium text-lg">
                         $45.00
                       </h4>

@@ -16,7 +16,7 @@ const Breadcrumb = () => {
                 <BsChevronRight />
               </div>
               <div>
-                <a href="shop.html">Shop</a>
+                <a href="shop.html" className="text-accentOne">Shop</a>
               </div>
             </div>
           </div>

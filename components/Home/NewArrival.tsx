@@ -31,14 +31,16 @@ const NewArrival = () => {
     return (
         <div className="container">
             <h2 className="text-primary font-semibold text-3xl uppercase pb-10">
-                Top New Arrival
+                <b>Top New Arrival</b>
             </h2>
-            <div className="w-full grid sm:grid-cols-1 md:grid-cols-4 grid-cols-4 gap-4">
+            <div className="w-full  grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6  gap-4 ">
                 {
                     loading ? null : <>
                         {
                             products.map((item: any, index: number) => (
-                                <div key={`product-${index}`} className="col border border-separate group">
+                                <div key={`product-${index}`} className="col border border-separate group rounded-xl  overflow-hidden h-90">
+                                    
+
                                     <ProductCard product={item} />
                                 </div>
                             ))

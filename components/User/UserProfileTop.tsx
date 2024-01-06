@@ -96,18 +96,18 @@ const UserProfileTop: React.FC = () => {
                         <picture>
                             <img
                                 className="h-7 w-7 text-white rounded-full"
-                                src={user.profile_avatar}
+                                src={`${baseUrl}/img/user.png`}
                                 alt="user photo"
                             />
                         </picture>
                         <span className="ml-2 hidden text-left md:block">
                             <span
                                 className={`${language == "bng" ? `bangla text-xl` : "font-sans text-base"
-                                    }  block font-medium text-gray-100`}
+                                    }  block font-medium text-gray-800 dark:text-white`}
                             >
                                 My Account
                             </span>
-                            <span className="-mt-1 block text-sm font-medium text-gray-200">
+                            <span className="-mt-1 block text-sm font-medium text-gray-800 dark:text-white">
                                 {user.firstName}
                             </span>
                         </span>
@@ -181,10 +181,7 @@ const UserProfileTop: React.FC = () => {
                     </div>
                 </div>
             ) : (
-                <Link href={`${baseUrl}/login`}>
-                    <FaUser className="text-[24px] text-black dark:text-white" />
-                    <p className="text-black dark:text-white">Account</p>
-                </Link>
+                <Link href={`${baseUrl}/login`} className=" p-3 font-medium hover:bg-accentOne ">Login/Register</Link>
             )}
         </>
     );

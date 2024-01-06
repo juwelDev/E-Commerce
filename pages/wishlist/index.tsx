@@ -17,7 +17,7 @@ const WishListPage = () => {
             <span className="text-sm text-gray-400">
               <AiOutlineRight />
             </span>
-            <p className="text-gray-600 font-medium">Profile</p>
+            <p className="text-gray-600 font-medium dark:text-white">Profile</p>
           </div>
           {/* ./breadcrumb */}
           {/* wrapper */}
@@ -34,9 +34,9 @@ const WishListPage = () => {
                     />
                   </picture>
                 </div>
-                <div className="flex-grow">
-                  <p className="text-gray-600">Hello,</p>
-                  <h4 className="text-gray-800 font-medium">John Doe</h4>
+                <div className="flex-grow ">
+                  <p className="text-gray-600 dark:text-white">Hello,</p>
+                  <h4 className="text-gray-800 font-medium dark:text-white">John Doe</h4>
                 </div>
               </div>
               <div className="mt-6 bg-white shadow rounded p-4 divide-y divide-gray-200 space-y-4 text-gray-600">
@@ -146,15 +146,15 @@ const WishListPage = () => {
                 <div className="w-28">
                   <picture>
                     <img
-                      src={`${baseUrl}/img/product/product20.jpg`}
+                      src={`${baseUrl}/img/collection/jacket-2.jpg`}
                       alt="product 20"
                       className="w-full"
                     />
                   </picture>
                 </div>
                 <div className="w-1/3">
-                  <h2 className="text-gray-800 text-xl font-medium uppercase">
-                    Italian L shape
+                  <h2 className="text-gray-800 text-xl font-medium uppercase dark:text-white">
+                    men's jacket
                   </h2>
                   <p className="text-gray-500 text-sm">
                     Availability:{" "}
@@ -162,7 +162,7 @@ const WishListPage = () => {
                   </p>
                 </div>
                 <div className="text-red-600 text-lg font-semibold">
-                  $320.00
+                  $30.00
                 </div>
                 <a
                   href="#"
@@ -178,15 +178,15 @@ const WishListPage = () => {
                 <div className="w-28">
                   <picture>
                     <img
-                      src={`${baseUrl}/img/product/product21.jpg`}
+                      src={`${baseUrl}/img/collection/pant-3.jpg`}
                       alt="product 21"
                       className="w-full"
                     />
                   </picture>
                 </div>
                 <div className="w-1/3">
-                  <h2 className="text-gray-800 text-xl font-medium uppercase">
-                    Dining Table
+                  <h2 className="text-gray-800 text-xl font-medium uppercase dark:text-white">
+                    men's pant
                   </h2>
                   <p className="text-gray-500 text-sm">
                     Availability:{" "}
@@ -194,7 +194,7 @@ const WishListPage = () => {
                   </p>
                 </div>
                 <div className="text-red-600 text-lg font-semibold">
-                  $320.00
+                  $32.00
                 </div>
                 <a
                   href="#"
@@ -210,15 +210,15 @@ const WishListPage = () => {
                 <div className="w-28">
                   <picture>
                     <img
-                      src={`${baseUrl}/img/product/product22.jpg`}
+                      src={`${baseUrl}/img/collection/shoes-1.jpg`}
                       alt="product 22"
                       className="w-full"
                     />
                   </picture>
                 </div>
                 <div className="w-1/3">
-                  <h2 className="text-gray-800 text-xl font-medium uppercase">
-                    Sofa
+                  <h2 className="text-gray-800 text-xl font-medium uppercase dark:text-white">
+                    men's shoes
                   </h2>
                   <p className="text-gray-500 text-sm">
                     Availability:{" "}
@@ -226,7 +226,7 @@ const WishListPage = () => {
                   </p>
                 </div>
                 <div className="text-red-600 text-lg font-semibold">
-                  $320.00
+                  $20.00
                 </div>
                 <a
                   href="#"
